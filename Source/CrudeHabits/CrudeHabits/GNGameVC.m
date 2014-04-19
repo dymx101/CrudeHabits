@@ -14,6 +14,9 @@
     
     GNVertProgressView      *_viewTeam1Progress;
     GNVertProgressView      *_viewTeam2Progress;
+    
+    UILabel                 *_lblTeam1;
+    UILabel                 *_lblTeam2;
 }
 
 @property (nonatomic, strong)     UIButton    *btnNext;
@@ -51,6 +54,8 @@
     [_btnNext alignCenterXWithView:self.view predicate:@"0"];
     [_btnNext constrainTopSpaceToView:_lblWord predicate:@"140"];
     
+    
+    ////////
     _viewTeam1Progress = [GNVertProgressView new];
     _viewTeam1Progress.delegate = self;
     [self.view addSubview:_viewTeam1Progress];
@@ -65,6 +70,29 @@
     [_viewTeam2Progress constrainWidth:@"20" height:@"260"];
     [_viewTeam2Progress alignTrailingEdgeWithView:self.view predicate:@"-20"];
     [_viewTeam2Progress alignBottomEdgeWithView:self.view predicate:@"-80"];
+    
+    
+    /////
+    _lblTeam1 = [UILabel new];
+    _lblTeam1.font = [UIFont boldSystemFontOfSize:13];
+    _lblTeam1.textColor = [UIColor whiteColor];
+    _lblTeam1.numberOfLines = 2;
+    _lblTeam1.textAlignment = NSTextAlignmentCenter;
+    _lblTeam1.text = @"Team\n1";
+    [self.view addSubview:_lblTeam1];
+    [_lblTeam1 alignCenterXWithView:_viewTeam1Progress predicate:nil];
+    [_lblTeam1 constrainTopSpaceToView:_viewTeam1Progress predicate:@"5"];
+    
+    
+    _lblTeam2 = [UILabel new];
+    _lblTeam2.font = [UIFont boldSystemFontOfSize:13];
+    _lblTeam2.textColor = [UIColor whiteColor];
+    _lblTeam2.numberOfLines = 2;
+    _lblTeam2.textAlignment = NSTextAlignmentCenter;
+    _lblTeam2.text = @"Team\n2";
+    [self.view addSubview:_lblTeam2];
+    [_lblTeam2 alignCenterXWithView:_viewTeam2Progress predicate:nil];
+    [_lblTeam2 constrainTopSpaceToView:_viewTeam2Progress predicate:@"5"];
 }
 
 
