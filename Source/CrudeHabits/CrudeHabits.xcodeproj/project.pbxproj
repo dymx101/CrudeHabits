@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7FC367DF4EA24FA5AB497FBE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ACCF2223FA47668D86F487 /* libPods.a */; };
+		EA27B1011902270B0086DC70 /* GNSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA27B1001902270B0086DC70 /* GNSplashView.m */; };
 		EA3B00DC1901F5D400C63D9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B00DB1901F5D400C63D9D /* Foundation.framework */; };
 		EA3B00DE1901F5D400C63D9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B00DD1901F5D400C63D9D /* CoreGraphics.framework */; };
 		EA3B00E01901F5D400C63D9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B00DF1901F5D400C63D9D /* UIKit.framework */; };
@@ -15,7 +16,7 @@
 		EA3B00E81901F5D400C63D9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3B00E71901F5D400C63D9D /* main.m */; };
 		EA3B00EC1901F5D400C63D9D /* GNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3B00EB1901F5D400C63D9D /* GNAppDelegate.m */; };
 		EA3B00EF1901F5D400C63D9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA3B00ED1901F5D400C63D9D /* Main.storyboard */; };
-		EA3B00F21901F5D400C63D9D /* GNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3B00F11901F5D400C63D9D /* GNViewController.m */; };
+		EA3B00F21901F5D400C63D9D /* GNBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3B00F11901F5D400C63D9D /* GNBaseVC.m */; };
 		EA3B00F41901F5D400C63D9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA3B00F31901F5D400C63D9D /* Images.xcassets */; };
 		EA3B00FB1901F5D400C63D9D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B00FA1901F5D400C63D9D /* XCTest.framework */; };
 		EA3B00FC1901F5D400C63D9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B00DB1901F5D400C63D9D /* Foundation.framework */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		42ACCF2223FA47668D86F487 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3489E583DE4777BF135656 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		EA27B0FF1902270B0086DC70 /* GNSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNSplashView.h; sourceTree = "<group>"; };
+		EA27B1001902270B0086DC70 /* GNSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNSplashView.m; sourceTree = "<group>"; };
 		EA3B00D81901F5D400C63D9D /* CrudeHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrudeHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3B00DB1901F5D400C63D9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA3B00DD1901F5D400C63D9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -50,8 +53,8 @@
 		EA3B00EA1901F5D400C63D9D /* GNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GNAppDelegate.h; sourceTree = "<group>"; };
 		EA3B00EB1901F5D400C63D9D /* GNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GNAppDelegate.m; sourceTree = "<group>"; };
 		EA3B00EE1901F5D400C63D9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EA3B00F01901F5D400C63D9D /* GNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GNViewController.h; sourceTree = "<group>"; };
-		EA3B00F11901F5D400C63D9D /* GNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GNViewController.m; sourceTree = "<group>"; };
+		EA3B00F01901F5D400C63D9D /* GNBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GNBaseVC.h; sourceTree = "<group>"; };
+		EA3B00F11901F5D400C63D9D /* GNBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GNBaseVC.m; sourceTree = "<group>"; };
 		EA3B00F31901F5D400C63D9D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EA3B00F91901F5D400C63D9D /* CrudeHabitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrudeHabitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3B00FA1901F5D400C63D9D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -89,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA27B0FE190226D90086DC70 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA27B0FF1902270B0086DC70 /* GNSplashView.h */,
+				EA27B1001902270B0086DC70 /* GNSplashView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EA3B00CF1901F5D400C63D9D = {
 			isa = PBXGroup;
 			children = (
@@ -128,8 +140,8 @@
 				EA3B00EA1901F5D400C63D9D /* GNAppDelegate.h */,
 				EA3B00EB1901F5D400C63D9D /* GNAppDelegate.m */,
 				EA3B00ED1901F5D400C63D9D /* Main.storyboard */,
-				EA3B00F01901F5D400C63D9D /* GNViewController.h */,
-				EA3B00F11901F5D400C63D9D /* GNViewController.m */,
+				EA3B00F01901F5D400C63D9D /* GNBaseVC.h */,
+				EA3B00F11901F5D400C63D9D /* GNBaseVC.m */,
 				EA3B00F31901F5D400C63D9D /* Images.xcassets */,
 				EA3B00E21901F5D400C63D9D /* Supporting Files */,
 			);
@@ -168,6 +180,7 @@
 		EA5386B11901F71A00860802 /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				EA27B0FE190226D90086DC70 /* Views */,
 				EA5386B21901F71A00860802 /* Utils */,
 			);
 			name = Src;
@@ -320,8 +333,9 @@
 			files = (
 				EA3B00E81901F5D400C63D9D /* main.m in Sources */,
 				EA5386B51901F72C00860802 /* FDColor.m in Sources */,
-				EA3B00F21901F5D400C63D9D /* GNViewController.m in Sources */,
+				EA3B00F21901F5D400C63D9D /* GNBaseVC.m in Sources */,
 				EA5386B81901F75200860802 /* FDDefine.m in Sources */,
+				EA27B1011902270B0086DC70 /* GNSplashView.m in Sources */,
 				EA3B00EC1901F5D400C63D9D /* GNAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
