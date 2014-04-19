@@ -7,9 +7,13 @@
 //
 
 #import "GNGameVC.h"
+#import "GNVertProgressView.h"
 
-@interface GNGameVC () {
-    UILabel     *_lblWord;
+@interface GNGameVC () <GNVertProgressViewDelegate> {
+    UILabel                 *_lblWord;
+    
+    GNVertProgressView      *_viewTeam1Progress;
+    GNVertProgressView      *_viewTeam2Progress;
 }
 
 @property (nonatomic, strong)     UIButton    *btnNext;
@@ -46,6 +50,34 @@
     [_btnNext constrainWidth:@"200" height:@"45"];
     [_btnNext alignCenterXWithView:self.view predicate:@"0"];
     [_btnNext constrainTopSpaceToView:_lblWord predicate:@"140"];
+    
+    _viewTeam1Progress = [GNVertProgressView new];
+    _viewTeam1Progress.delegate = self;
+    [self.view addSubview:_viewTeam1Progress];
+    [_viewTeam1Progress constrainWidth:@"20" height:@"260"];
+    [_viewTeam1Progress alignLeadingEdgeWithView:self.view predicate:@"20"];
+    [_viewTeam1Progress alignBottomEdgeWithView:self.view predicate:@"-80"];
+    
+    
+    _viewTeam2Progress = [GNVertProgressView new];
+    _viewTeam2Progress.delegate = self;
+    [self.view addSubview:_viewTeam2Progress];
+    [_viewTeam2Progress constrainWidth:@"20" height:@"260"];
+    [_viewTeam2Progress alignTrailingEdgeWithView:self.view predicate:@"-20"];
+    [_viewTeam2Progress alignBottomEdgeWithView:self.view predicate:@"-80"];
+}
+
+
+
+#pragma mark - progress view delegate
+-(void)progressView:(GNVertProgressView *)aProgressView progressChanged:(CGFloat)aProgress {
+    if (aProgress >= 1.f) {
+        if (aProgressView == _viewTeam1Progress) {
+            DLog(@"Team 1 wins!");
+        } else if (aProgressView == _viewTeam2Progress) {
+            DLog(@"Team 2 wins!");
+        }
+    }
 }
 
 @end
