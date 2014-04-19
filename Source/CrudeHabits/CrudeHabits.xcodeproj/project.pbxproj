@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7FC367DF4EA24FA5AB497FBE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ACCF2223FA47668D86F487 /* libPods.a */; };
+		EA13E87E190250DE004F19D4 /* GNSplashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13E87D190250DD004F19D4 /* GNSplashVC.m */; };
+		EA13E8811902514E004F19D4 /* GNHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13E8801902514E004F19D4 /* GNHelpVC.m */; };
+		EA13E8841902569B004F19D4 /* GNStartGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13E8831902569B004F19D4 /* GNStartGameVC.m */; };
 		EA27B1011902270B0086DC70 /* GNSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA27B1001902270B0086DC70 /* GNSplashView.m */; };
 		EA3B00DC1901F5D400C63D9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B00DB1901F5D400C63D9D /* Foundation.framework */; };
 		EA3B00DE1901F5D400C63D9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B00DD1901F5D400C63D9D /* CoreGraphics.framework */; };
@@ -40,6 +43,12 @@
 /* Begin PBXFileReference section */
 		42ACCF2223FA47668D86F487 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3489E583DE4777BF135656 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		EA13E87C190250DD004F19D4 /* GNSplashVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNSplashVC.h; sourceTree = "<group>"; };
+		EA13E87D190250DD004F19D4 /* GNSplashVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNSplashVC.m; sourceTree = "<group>"; };
+		EA13E87F1902514E004F19D4 /* GNHelpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNHelpVC.h; sourceTree = "<group>"; };
+		EA13E8801902514E004F19D4 /* GNHelpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNHelpVC.m; sourceTree = "<group>"; };
+		EA13E8821902569B004F19D4 /* GNStartGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNStartGameVC.h; sourceTree = "<group>"; };
+		EA13E8831902569B004F19D4 /* GNStartGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNStartGameVC.m; sourceTree = "<group>"; };
 		EA27B0FF1902270B0086DC70 /* GNSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNSplashView.h; sourceTree = "<group>"; };
 		EA27B1001902270B0086DC70 /* GNSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNSplashView.m; sourceTree = "<group>"; };
 		EA3B00D81901F5D400C63D9D /* CrudeHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrudeHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +153,12 @@
 				EA3B00F11901F5D400C63D9D /* GNBaseVC.m */,
 				EA3B00F31901F5D400C63D9D /* Images.xcassets */,
 				EA3B00E21901F5D400C63D9D /* Supporting Files */,
+				EA13E87C190250DD004F19D4 /* GNSplashVC.h */,
+				EA13E87D190250DD004F19D4 /* GNSplashVC.m */,
+				EA13E87F1902514E004F19D4 /* GNHelpVC.h */,
+				EA13E8801902514E004F19D4 /* GNHelpVC.m */,
+				EA13E8821902569B004F19D4 /* GNStartGameVC.h */,
+				EA13E8831902569B004F19D4 /* GNStartGameVC.m */,
 			);
 			path = CrudeHabits;
 			sourceTree = "<group>";
@@ -335,7 +350,10 @@
 				EA5386B51901F72C00860802 /* FDColor.m in Sources */,
 				EA3B00F21901F5D400C63D9D /* GNBaseVC.m in Sources */,
 				EA5386B81901F75200860802 /* FDDefine.m in Sources */,
+				EA13E8841902569B004F19D4 /* GNStartGameVC.m in Sources */,
+				EA13E8811902514E004F19D4 /* GNHelpVC.m in Sources */,
 				EA27B1011902270B0086DC70 /* GNSplashView.m in Sources */,
+				EA13E87E190250DE004F19D4 /* GNSplashVC.m in Sources */,
 				EA3B00EC1901F5D400C63D9D /* GNAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

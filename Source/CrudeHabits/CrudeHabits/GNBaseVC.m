@@ -7,11 +7,11 @@
 //
 
 #import "GNBaseVC.h"
-#import "GNSplashView.h"
+
 
 @interface GNBaseVC () {
     UILabel         *_lblTitle;
-    GNSplashView    *_splashScreen;
+
 }
 
 @end
@@ -30,12 +30,6 @@
     [self.view addSubview:_lblTitle];
     [_lblTitle alignCenterXWithView:self.view predicate:nil];
     [_lblTitle alignTopEdgeWithView:self.view predicate:@"30"];
-    
-    _splashScreen = [GNSplashView new];
-    [self.view addSubview:_splashScreen];
-    [_splashScreen alignToView:self.view];
-    
-    [_splashScreen runAnimation];
 }
 
 
