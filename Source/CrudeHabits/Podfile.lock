@@ -17,6 +17,7 @@ PODS:
   - AFNetworking/Serialization (2.1.0)
   - AFNetworking/UIKit (2.1.0):
     - AFNetworking/NSURLConnection
+  - BKECircularProgressView (0.2)
   - DACircularProgress (2.2.0)
   - EDColor (0.2.1)
   - EDStarRating (1.1)
@@ -38,6 +39,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.1.0)
+  - BKECircularProgressView (~> 0.2)
   - EDColor
   - EDStarRating (~> 1.1)
   - FLKAutoLayout (~> 0.1.1)
@@ -50,6 +52,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: c7d7901a83f631414c7eda1737261f696101a5cd
+  BKECircularProgressView: 247f69922a825f984fe4ff31ddf65fd28102246f
   DACircularProgress: 659d6fd11b5fc099c13ba9350239d9dca324916a
   EDColor: d3717ea14cd90bf47591d0dc66aeb871bd6c850d
   EDStarRating: 4954b62647884e7b2d37c4720d4a1f758b5a3435

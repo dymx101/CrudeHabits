@@ -48,6 +48,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 1
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 0
 
+// BKECircularProgressView
+#define COCOAPODS_POD_AVAILABLE_BKECircularProgressView
+#define COCOAPODS_VERSION_MAJOR_BKECircularProgressView 0
+#define COCOAPODS_VERSION_MINOR_BKECircularProgressView 2
+#define COCOAPODS_VERSION_PATCH_BKECircularProgressView 0
+
 // DACircularProgress
 #define COCOAPODS_POD_AVAILABLE_DACircularProgress
 #define COCOAPODS_VERSION_MAJOR_DACircularProgress 2

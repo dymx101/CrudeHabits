@@ -13,10 +13,10 @@
             buildForTesting = "YES"
             buildForRunning = "YES">
             <BuildableReference
-               BlueprintIdentifier = "5F628390A9A8470AB9C0BF95"
+               BlueprintIdentifier = "CD26547ACE4D41B6B39936A4"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BlueprintName = "Pods-SDWebImage"
-               BuildableName = "libPods-SDWebImage.a"
+               BlueprintName = "Pods-BKECircularProgressView"
+               BuildableName = "libPods-BKECircularProgressView.a"
                BuildableIdentifier = "primary">
             </BuildableReference>
          </BuildActionEntry>

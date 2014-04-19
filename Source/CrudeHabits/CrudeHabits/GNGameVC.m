@@ -8,6 +8,7 @@
 
 #import "GNGameVC.h"
 #import "GNVertProgressView.h"
+#import <BKECircularProgressView/BKECircularProgressView.h>
 
 @interface GNGameVC () <GNVertProgressViewDelegate> {
     UILabel                 *_lblWord;
@@ -17,6 +18,13 @@
     
     UILabel                 *_lblTeam1;
     UILabel                 *_lblTeam2;
+    
+    BKECircularProgressView       *_viewCircularTimer;
+    
+    NSTimer                       *_timer;
+    CGFloat                     _timeCount;
+    CGFloat                     _timeCountMax;
+    CGFloat                     _tickInterval;
 }
 
 @property (nonatomic, strong)     UIButton    *btnNext;
@@ -28,6 +36,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _timeCountMax = 50.f;
+    _tickInterval = 0.1f;
     
     
     _lblWord = [UILabel new];
@@ -39,6 +49,18 @@
     [self.view addSubview:_lblWord];
     [_lblWord alignCenterXWithView:self.view predicate:nil];
     [_lblWord alignTopEdgeWithView:self.view predicate:@"140"];
+    
+    
+    
+    _viewCircularTimer = [BKECircularProgressView new];//[[BKECircularProgressView alloc] initWithFrame:CGRectMake(110, 100, 100, 100)];
+    _viewCircularTimer.progressTintColor = [UIColor whiteColor];
+    _viewCircularTimer.backgroundTintColor = [FDColor sharedInstance].themeRed;
+    _viewCircularTimer.lineWidth = 7.f;
+
+    [self.view addSubview:_viewCircularTimer];
+    [_viewCircularTimer alignCenterXWithView:self.view predicate:@"0"];
+    [_viewCircularTimer constrainTopSpaceToView:_lblWord predicate:@"20"];
+    [_viewCircularTimer constrainWidth:@"70" height:@"70"];
     
     
     //////
@@ -93,8 +115,30 @@
     [self.view addSubview:_lblTeam2];
     [_lblTeam2 alignCenterXWithView:_viewTeam2Progress predicate:nil];
     [_lblTeam2 constrainTopSpaceToView:_viewTeam2Progress predicate:@"5"];
+    
+    
+    ////
+    [self startTicking];
 }
 
+
+-(void)startTicking {
+    _timeCount = 0;
+    [_timer invalidate];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:_tickInterval target:self selector:@selector(tick:) userInfo:nil repeats:YES];
+}
+
+-(void)tick:(id)sender {
+    _timeCount += _tickInterval;
+    _viewCircularTimer.progress = ((CGFloat)_timeCount / _timeCountMax);
+    DLog(@"progress:%f", _viewCircularTimer.progress);
+    
+    if (_timeCount >= _timeCountMax) {
+        DLog(@"Time is up!");
+        [_timer invalidate];
+        _timer = nil;
+    }
+}
 
 
 #pragma mark - progress view delegate

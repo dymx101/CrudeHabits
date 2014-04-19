@@ -13,3 +13,5 @@ pod 'EDStarRating', '~> 1.1'
 #pod 'ABCalendarPicker', '~> 1.1.2'
 pod 'MBCalendarKit', '1.1.1'
 pod 'MWPhotoBrowser', '~> 1.4.0'
+
+pod 'BKECircularProgressView', '~> 0.2'
