@@ -593,10 +593,12 @@
 			baseConfigurationReference = 4C3489E583DE4777BF135656 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Luosheng Peng (75BAGEK59M)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrudeHabits/CrudeHabits-Prefix.pch";
 				INFOPLIST_FILE = "CrudeHabits/CrudeHabits-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "31DB401A-4151-426F-9C2B-9A040389E8F5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -606,10 +608,12 @@
 			baseConfigurationReference = 4C3489E583DE4777BF135656 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: GageIn, Inc (2L7KL2QHQ3)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrudeHabits/CrudeHabits-Prefix.pch";
 				INFOPLIST_FILE = "CrudeHabits/CrudeHabits-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "31DB401A-4151-426F-9C2B-9A040389E8F5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
