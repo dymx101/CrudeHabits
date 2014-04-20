@@ -10,8 +10,17 @@
 #import "GNVertProgressView.h"
 #import <BKECircularProgressView/BKECircularProgressView.h>
 
+typedef enum {
+    kGameStatePlaying = 0
+    , kGameStatePaused
+    , kGameStateShowTimeUp
+    , kGameStateShowNextRound
+}GameState;
+
+
 @interface GNGameVC () <GNVertProgressViewDelegate> {
     UILabel                 *_lblWord;
+    UILabel                 *_lblCenterTip;
     
     GNVertProgressView      *_viewTeam1Progress;
     GNVertProgressView      *_viewTeam2Progress;
@@ -25,9 +34,12 @@
     CGFloat                     _timeCount;
     CGFloat                     _timeCountMax;
     CGFloat                     _tickInterval;
+    
+    GameState                   _gameState;
 }
 
 @property (nonatomic, strong)     UIButton    *btnNext;
+@property (nonatomic, strong)     UIButton    *btnNextRound;
 
 @end
 
@@ -36,7 +48,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _timeCountMax = 50.f;
+    _timeCountMax = 10.f;
     _tickInterval = 0.1f;
     
     
@@ -75,6 +87,35 @@
     [_btnNext constrainWidth:@"200" height:@"45"];
     [_btnNext alignCenterXWithView:self.view predicate:@"0"];
     [_btnNext constrainTopSpaceToView:_lblWord predicate:@"140"];
+    
+    
+    //////
+    _btnNextRound = [UIButton new];
+    _btnNextRound.backgroundColor = [UIColor whiteColor];
+    _btnNextRound.titleLabel.font = [UIFont boldSystemFontOfSize:30];
+    [_btnNextRound setTitleColor:[FDColor sharedInstance].themeRed forState:UIControlStateNormal];
+    [_btnNextRound setTitle:@"Next Round" forState:UIControlStateNormal];
+    _btnNextRound.layer.cornerRadius = 10.f;
+    [self.view addSubview:_btnNextRound];
+    _btnNextRound.hidden = YES;
+    
+    [_btnNextRound constrainWidth:@"200" height:@"45"];
+    [_btnNextRound alignCenterXWithView:self.view predicate:@"0"];
+    [_btnNextRound constrainTopSpaceToView:_lblWord predicate:@"230"];
+    
+    
+    /////
+    _lblCenterTip = [UILabel new];
+    _lblCenterTip.font = [UIFont boldSystemFontOfSize:20];
+    _lblCenterTip.textColor = [UIColor whiteColor];
+    _lblCenterTip.numberOfLines = 0;
+    _lblCenterTip.textAlignment = NSTextAlignmentCenter;
+    _lblCenterTip.text = @"Tap the side that won the point";
+    [self.view addSubview:_lblCenterTip];
+    [_lblCenterTip alignCenterXWithView:self.view predicate:nil];
+    [_lblCenterTip alignTopEdgeWithView:_lblWord predicate:@"170"];
+    [_lblCenterTip constrainWidth:@"170"];
+    _lblCenterTip.hidden = YES;
     
     
     ////////
@@ -122,6 +163,7 @@
 }
 
 
+#pragma mark -
 -(void)startTicking {
     _timeCount = 0;
     [_timer invalidate];
@@ -131,13 +173,34 @@
 -(void)tick:(id)sender {
     _timeCount += _tickInterval;
     _viewCircularTimer.progress = ((CGFloat)_timeCount / _timeCountMax);
-    DLog(@"progress:%f", _viewCircularTimer.progress);
+    //DLog(@"progress:%f", _viewCircularTimer.progress);
     
     if (_timeCount >= _timeCountMax) {
         DLog(@"Time is up!");
         [_timer invalidate];
         _timer = nil;
+        
+        [self showTimeIsUp];
     }
+}
+
+
+-(void)showTimeIsUp {
+    _lblWord.text = @"TIME'S UP!";
+    _viewCircularTimer.hidden = YES;
+    _btnNext.hidden = YES;
+    _lblCenterTip.hidden = NO;
+    
+    _gameState = kGameStateShowTimeUp;
+}
+
+
+-(void)showNextRound:(BOOL)aTeam1Won {
+    _lblWord.text = aTeam1Won ? @"Go Team 1!" : @"Go Team 2!";
+    _lblCenterTip.hidden = YES;
+    _btnNextRound.hidden = NO;
+    
+    _gameState = kGameStateShowNextRound;
 }
 
 
@@ -149,7 +212,16 @@
         } else if (aProgressView == _viewTeam2Progress) {
             DLog(@"Team 2 wins!");
         }
+    } else {
+        DLog(@"Next Round");
+        if (_gameState == kGameStateShowTimeUp) {
+            [self showNextRound:(aProgressView == _viewTeam1Progress)];
+        }
     }
+}
+
+-(BOOL)progressViewShouldChangeProgress:(GNVertProgressView *)aProgressView {
+    return (_gameState == kGameStateShowTimeUp);
 }
 
 @end

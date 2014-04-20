@@ -14,6 +14,7 @@
 
  @required
 -(void)progressView:(GNVertProgressView *)aProgressView progressChanged:(CGFloat)aProgress;
+-(BOOL)progressViewShouldChangeProgress:(GNVertProgressView *)aProgressView;
 
 @end
 
