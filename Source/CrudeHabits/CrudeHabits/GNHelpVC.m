@@ -24,7 +24,7 @@
     [super viewDidLoad];
     
     _lblDescription = [UILabel new];
-    _lblDescription.font = [UIFont boldSystemFontOfSize:15];
+    _lblDescription.font = [UIFont fontWithName:FONT_REGULAR size:15];
     _lblDescription.textColor = [UIColor whiteColor];
     _lblDescription.numberOfLines = 0;
     _lblDescription.textAlignment = NSTextAlignmentCenter;
@@ -37,7 +37,7 @@
     //////
     _btnPlay = [UIButton new];
     _btnPlay.backgroundColor = [UIColor whiteColor];
-    _btnPlay.titleLabel.font = [UIFont boldSystemFontOfSize:30];
+    _btnPlay.titleLabel.font = [UIFont fontWithName:FONT_REGULAR size:30];
     [_btnPlay setTitleColor:[FDColor sharedInstance].themeRed forState:UIControlStateNormal];
     [_btnPlay setTitle:@"Play" forState:UIControlStateNormal];
     _btnPlay.layer.cornerRadius = 10.f;
@@ -51,7 +51,7 @@
     //////
     _btnBack = [UIButton new];
     _btnBack.backgroundColor = [UIColor whiteColor];
-    _btnBack.titleLabel.font = [UIFont boldSystemFontOfSize:30];
+    _btnBack.titleLabel.font = [UIFont fontWithName:FONT_REGULAR size:30];
     [_btnBack setTitleColor:[FDColor sharedInstance].themeRed forState:UIControlStateNormal];
     [_btnBack setTitle:@"Back" forState:UIControlStateNormal];
     _btnBack.layer.cornerRadius = 10.f;

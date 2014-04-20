@@ -23,7 +23,7 @@
     if (self) {
         
         _lblC = [UILabel new];
-        _lblC.font = [UIFont boldSystemFontOfSize:200];
+        _lblC.font = [UIFont fontWithName:FONT_REGULAR size:200];
         _lblC.textColor = [UIColor whiteColor];
         _lblC.text = @"C";
         _lblC.textAlignment = NSTextAlignmentCenter;
@@ -35,7 +35,8 @@
         [_lblC alignTopEdgeWithView:self predicate:@"80"];
         
         _lblH = [UILabel new];
-        _lblH.font = [UIFont boldSystemFontOfSize:200];
+        UIFont  *font = [UIFont fontWithName:FONT_REGULAR size:200];
+        _lblH.font = font;
         _lblH.textColor = [UIColor whiteColor];
         _lblH.text = @"H";
         _lblH.textAlignment = NSTextAlignmentCenter;
@@ -44,14 +45,14 @@
         //_lblH.frame = CGRectMake(140, 80, 160, 180);
 
         [_lblH alignCenterXWithView:self predicate:@"40"];
-        [_lblH alignCenterYWithView:_lblC predicate:@"-25"];
+        [_lblH alignCenterYWithView:_lblC predicate:@"-22"];
         
         
         
         //////
         _btnPlay = [UIButton new];
         _btnPlay.backgroundColor = [UIColor whiteColor];
-        _btnPlay.titleLabel.font = [UIFont boldSystemFontOfSize:30];
+        _btnPlay.titleLabel.font = [UIFont fontWithName:FONT_REGULAR size:30];
         [_btnPlay setTitleColor:[FDColor sharedInstance].themeRed forState:UIControlStateNormal];
         [_btnPlay setTitle:@"Play" forState:UIControlStateNormal];
         _btnPlay.layer.cornerRadius = 10.f;
@@ -65,7 +66,7 @@
         //////
         _btnHowItWorks = [UIButton new];
         _btnHowItWorks.backgroundColor = [UIColor whiteColor];
-        _btnHowItWorks.titleLabel.font = [UIFont boldSystemFontOfSize:30];
+        _btnHowItWorks.titleLabel.font = [UIFont fontWithName:FONT_REGULAR size:20];
         [_btnHowItWorks setTitleColor:[FDColor sharedInstance].themeRed forState:UIControlStateNormal];
         [_btnHowItWorks setTitle:@"How it works" forState:UIControlStateNormal];
         _btnHowItWorks.layer.cornerRadius = 10.f;

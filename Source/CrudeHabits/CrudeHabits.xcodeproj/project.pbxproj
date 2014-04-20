@@ -29,8 +29,27 @@
 		EA3B01071901F5D400C63D9D /* CrudeHabitsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3B01061901F5D400C63D9D /* CrudeHabitsTests.m */; };
 		EA3B036719036D4C009F9500 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B036519036D4C009F9500 /* play@2x.png */; };
 		EA3B036819036D4C009F9500 /* pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B036619036D4C009F9500 /* pause@2x.png */; };
+		EA3B037719037570009F9500 /* Dragon-icon 120.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B036A19037570009F9500 /* Dragon-icon 120.png */; };
+		EA3B037819037570009F9500 /* Dragon-icon 144.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B036B19037570009F9500 /* Dragon-icon 144.png */; };
+		EA3B037919037570009F9500 /* Dragon-icon 152.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B036C19037570009F9500 /* Dragon-icon 152.png */; };
+		EA3B037A19037570009F9500 /* Dragon-icon 76.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B036D19037570009F9500 /* Dragon-icon 76.png */; };
+		EA3B037B19037570009F9500 /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B036E19037570009F9500 /* Icon-100.png */; };
+		EA3B037C19037570009F9500 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B036F19037570009F9500 /* Icon-40.png */; };
+		EA3B037D19037570009F9500 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B037019037570009F9500 /* Icon-72.png */; };
+		EA3B037E19037570009F9500 /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B037119037570009F9500 /* Icon-80.png */; };
+		EA3B037F19037570009F9500 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B037219037570009F9500 /* Icon-Small-50.png */; };
+		EA3B038019037570009F9500 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B037319037570009F9500 /* Icon-Small.png */; };
+		EA3B038119037570009F9500 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B037419037570009F9500 /* Icon-Small@2x.png */; };
+		EA3B038219037570009F9500 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B037519037570009F9500 /* Icon.png */; };
+		EA3B038319037570009F9500 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B037619037570009F9500 /* Icon@2x.png */; };
+		EA3B03861903775E009F9500 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA3B03841903775E009F9500 /* Montserrat-Bold.ttf */; };
+		EA3B03871903775E009F9500 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA3B03851903775E009F9500 /* Montserrat-Regular.ttf */; };
+		EA3B038F190381A9009F9500 /* MCSoundBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3B038E190381A9009F9500 /* MCSoundBoard.m */; };
 		EA5386B51901F72C00860802 /* FDColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5386B41901F72C00860802 /* FDColor.m */; };
 		EA5386B81901F75200860802 /* FDDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5386B71901F75200860802 /* FDDefine.m */; };
+		EA5A51371903855200E9C49B /* selected.wav in Resources */ = {isa = PBXBuildFile; fileRef = EA5A51361903855200E9C49B /* selected.wav */; };
+		EA5A5139190385A000E9C49B /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = EA5A5138190385A000E9C49B /* win.wav */; };
+		EA5A513B190385FB00E9C49B /* opener.wav in Resources */ = {isa = PBXBuildFile; fileRef = EA5A513A190385FB00E9C49B /* opener.wav */; };
 		EA7B977B19027E0600975117 /* GNVertProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B977A19027E0600975117 /* GNVertProgressView.m */; };
 /* End PBXBuildFile section */
 
@@ -78,10 +97,30 @@
 		EA3B01061901F5D400C63D9D /* CrudeHabitsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrudeHabitsTests.m; sourceTree = "<group>"; };
 		EA3B036519036D4C009F9500 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		EA3B036619036D4C009F9500 /* pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause@2x.png"; sourceTree = "<group>"; };
+		EA3B036A19037570009F9500 /* Dragon-icon 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dragon-icon 120.png"; sourceTree = "<group>"; };
+		EA3B036B19037570009F9500 /* Dragon-icon 144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dragon-icon 144.png"; sourceTree = "<group>"; };
+		EA3B036C19037570009F9500 /* Dragon-icon 152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dragon-icon 152.png"; sourceTree = "<group>"; };
+		EA3B036D19037570009F9500 /* Dragon-icon 76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dragon-icon 76.png"; sourceTree = "<group>"; };
+		EA3B036E19037570009F9500 /* Icon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-100.png"; sourceTree = "<group>"; };
+		EA3B036F19037570009F9500 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		EA3B037019037570009F9500 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		EA3B037119037570009F9500 /* Icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80.png"; sourceTree = "<group>"; };
+		EA3B037219037570009F9500 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		EA3B037319037570009F9500 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		EA3B037419037570009F9500 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		EA3B037519037570009F9500 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		EA3B037619037570009F9500 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		EA3B03841903775E009F9500 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		EA3B03851903775E009F9500 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		EA3B038D190381A9009F9500 /* MCSoundBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSoundBoard.h; sourceTree = "<group>"; };
+		EA3B038E190381A9009F9500 /* MCSoundBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSoundBoard.m; sourceTree = "<group>"; };
 		EA5386B31901F72C00860802 /* FDColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDColor.h; sourceTree = "<group>"; };
 		EA5386B41901F72C00860802 /* FDColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDColor.m; sourceTree = "<group>"; };
 		EA5386B61901F75200860802 /* FDDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDDefine.h; sourceTree = "<group>"; };
 		EA5386B71901F75200860802 /* FDDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDDefine.m; sourceTree = "<group>"; };
+		EA5A51361903855200E9C49B /* selected.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = selected.wav; sourceTree = "<group>"; };
+		EA5A5138190385A000E9C49B /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
+		EA5A513A190385FB00E9C49B /* opener.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = opener.wav; sourceTree = "<group>"; };
 		EA7B977919027E0600975117 /* GNVertProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNVertProgressView.h; sourceTree = "<group>"; };
 		EA7B977A19027E0600975117 /* GNVertProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNVertProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +164,12 @@
 		EA3B00CF1901F5D400C63D9D = {
 			isa = PBXGroup;
 			children = (
+				EA5A513A190385FB00E9C49B /* opener.wav */,
+				EA5A5138190385A000E9C49B /* win.wav */,
+				EA5A51361903855200E9C49B /* selected.wav */,
+				EA3B03841903775E009F9500 /* Montserrat-Bold.ttf */,
+				EA3B03851903775E009F9500 /* Montserrat-Regular.ttf */,
+				EA3B036919037570009F9500 /* AppIcon */,
 				EA5386B11901F71A00860802 /* Src */,
 				EA3B00E11901F5D400C63D9D /* CrudeHabits */,
 				EA3B01001901F5D400C63D9D /* CrudeHabitsTests */,
@@ -206,9 +251,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EA3B036919037570009F9500 /* AppIcon */ = {
+			isa = PBXGroup;
+			children = (
+				EA3B036A19037570009F9500 /* Dragon-icon 120.png */,
+				EA3B036B19037570009F9500 /* Dragon-icon 144.png */,
+				EA3B036C19037570009F9500 /* Dragon-icon 152.png */,
+				EA3B036D19037570009F9500 /* Dragon-icon 76.png */,
+				EA3B036E19037570009F9500 /* Icon-100.png */,
+				EA3B036F19037570009F9500 /* Icon-40.png */,
+				EA3B037019037570009F9500 /* Icon-72.png */,
+				EA3B037119037570009F9500 /* Icon-80.png */,
+				EA3B037219037570009F9500 /* Icon-Small-50.png */,
+				EA3B037319037570009F9500 /* Icon-Small.png */,
+				EA3B037419037570009F9500 /* Icon-Small@2x.png */,
+				EA3B037519037570009F9500 /* Icon.png */,
+				EA3B037619037570009F9500 /* Icon@2x.png */,
+			);
+			path = AppIcon;
+			sourceTree = "<group>";
+		};
+		EA3B038C190381A9009F9500 /* MCSoundBoard */ = {
+			isa = PBXGroup;
+			children = (
+				EA3B038D190381A9009F9500 /* MCSoundBoard.h */,
+				EA3B038E190381A9009F9500 /* MCSoundBoard.m */,
+			);
+			path = MCSoundBoard;
+			sourceTree = "<group>";
+		};
 		EA5386B11901F71A00860802 /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				EA3B038C190381A9009F9500 /* MCSoundBoard */,
 				EA3B036519036D4C009F9500 /* play@2x.png */,
 				EA3B036619036D4C009F9500 /* pause@2x.png */,
 				EA27B0FE190226D90086DC70 /* Views */,
@@ -308,11 +383,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3B038219037570009F9500 /* Icon.png in Resources */,
+				EA3B038319037570009F9500 /* Icon@2x.png in Resources */,
 				EA3B00F41901F5D400C63D9D /* Images.xcassets in Resources */,
+				EA3B037F19037570009F9500 /* Icon-Small-50.png in Resources */,
+				EA3B037819037570009F9500 /* Dragon-icon 144.png in Resources */,
 				EA3B00E61901F5D400C63D9D /* InfoPlist.strings in Resources */,
+				EA3B037719037570009F9500 /* Dragon-icon 120.png in Resources */,
 				EA3B036819036D4C009F9500 /* pause@2x.png in Resources */,
+				EA5A513B190385FB00E9C49B /* opener.wav in Resources */,
+				EA3B03871903775E009F9500 /* Montserrat-Regular.ttf in Resources */,
+				EA3B037D19037570009F9500 /* Icon-72.png in Resources */,
+				EA3B037E19037570009F9500 /* Icon-80.png in Resources */,
+				EA5A51371903855200E9C49B /* selected.wav in Resources */,
+				EA3B038019037570009F9500 /* Icon-Small.png in Resources */,
+				EA5A5139190385A000E9C49B /* win.wav in Resources */,
 				EA3B036719036D4C009F9500 /* play@2x.png in Resources */,
 				EA3B00EF1901F5D400C63D9D /* Main.storyboard in Resources */,
+				EA3B03861903775E009F9500 /* Montserrat-Bold.ttf in Resources */,
+				EA3B037A19037570009F9500 /* Dragon-icon 76.png in Resources */,
+				EA3B037B19037570009F9500 /* Icon-100.png in Resources */,
+				EA3B038119037570009F9500 /* Icon-Small@2x.png in Resources */,
+				EA3B037C19037570009F9500 /* Icon-40.png in Resources */,
+				EA3B037919037570009F9500 /* Dragon-icon 152.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +467,7 @@
 				EA27B1011902270B0086DC70 /* GNSplashView.m in Sources */,
 				EA13E87E190250DE004F19D4 /* GNSplashVC.m in Sources */,
 				EA3B00EC1901F5D400C63D9D /* GNAppDelegate.m in Sources */,
+				EA3B038F190381A9009F9500 /* MCSoundBoard.m in Sources */,
 				EA13E88719025B7A004F19D4 /* GNGameVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,7 +592,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4C3489E583DE4777BF135656 /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrudeHabits/CrudeHabits-Prefix.pch";
@@ -512,7 +605,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4C3489E583DE4777BF135656 /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrudeHabits/CrudeHabits-Prefix.pch";

@@ -58,21 +58,25 @@ typedef enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _timeCountMax = 3.f;
+    _timeCountMax = 5.f;
     _tickInterval = 0.1f;
     
     _words = @[@"Twerking", @"Moonwalk", @"LOL", @"Bookworm", @"Snicker"];
     
     
     _lblWord = [UILabel new];
-    _lblWord.font = [UIFont boldSystemFontOfSize:45];
+    _lblWord.font = [UIFont fontWithName:FONT_REGULAR size:45];
+    _lblWord.minimumScaleFactor = .5f;
+    _lblWord.adjustsFontSizeToFitWidth = YES;
     _lblWord.textColor = [UIColor whiteColor];
-    _lblWord.numberOfLines = 0;
+    _lblWord.numberOfLines = 2;
     _lblWord.textAlignment = NSTextAlignmentCenter;
     _lblWord.text = @"Twerking";
     [self.view addSubview:_lblWord];
-    [_lblWord alignCenterXWithView:self.view predicate:nil];
-    [_lblWord alignTopEdgeWithView:self.view predicate:@"140"];
+    [_lblWord alignLeading:@"30" trailing:@"-30" toView:self.view];
+
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:_lblWord attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:-400];
+    [self.view addConstraint:constraint];
     
     
     ////
@@ -108,7 +112,7 @@ typedef enum {
     //////
     _btnNext = [UIButton new];
     _btnNext.backgroundColor = [UIColor whiteColor];
-    _btnNext.titleLabel.font = [UIFont boldSystemFontOfSize:30];
+    _btnNext.titleLabel.font = [UIFont fontWithName:FONT_REGULAR size:30];//[UIFont boldSystemFontOfSize:30];
     [_btnNext setTitleColor:[FDColor sharedInstance].themeRed forState:UIControlStateNormal];
     [_btnNext setTitle:@"Next" forState:UIControlStateNormal];
     _btnNext.layer.cornerRadius = 10.f;
@@ -122,7 +126,7 @@ typedef enum {
     //////
     _btnNextRound = [UIButton new];
     _btnNextRound.backgroundColor = [UIColor whiteColor];
-    _btnNextRound.titleLabel.font = [UIFont boldSystemFontOfSize:30];
+    _btnNextRound.titleLabel.font = [UIFont fontWithName:FONT_REGULAR size:30];//[UIFont boldSystemFontOfSize:30];
     [_btnNextRound setTitleColor:[FDColor sharedInstance].themeRed forState:UIControlStateNormal];
     [_btnNextRound setTitle:@"Next Round" forState:UIControlStateNormal];
     _btnNextRound.layer.cornerRadius = 10.f;
@@ -137,7 +141,7 @@ typedef enum {
     //////
     _btnPlayAgain = [UIButton new];
     _btnPlayAgain.backgroundColor = [UIColor whiteColor];
-    _btnPlayAgain.titleLabel.font = [UIFont boldSystemFontOfSize:30];
+    _btnPlayAgain.titleLabel.font = [UIFont fontWithName:FONT_REGULAR size:30];//[UIFont boldSystemFontOfSize:30];
     [_btnPlayAgain setTitleColor:[FDColor sharedInstance].themeRed forState:UIControlStateNormal];
     [_btnPlayAgain setTitle:@"Play Again" forState:UIControlStateNormal];
     _btnPlayAgain.layer.cornerRadius = 10.f;
@@ -151,7 +155,7 @@ typedef enum {
     
     _btnCategory = [UIButton new];
     _btnCategory.backgroundColor = [UIColor whiteColor];
-    _btnCategory.titleLabel.font = [UIFont boldSystemFontOfSize:30];
+    _btnCategory.titleLabel.font = [UIFont fontWithName:FONT_REGULAR size:30];//[UIFont boldSystemFontOfSize:30];
     [_btnCategory setTitleColor:[FDColor sharedInstance].themeRed forState:UIControlStateNormal];
     [_btnCategory setTitle:@"Categories" forState:UIControlStateNormal];
     _btnCategory.layer.cornerRadius = 10.f;
@@ -165,7 +169,7 @@ typedef enum {
     
     /////
     _lblCenterTip = [UILabel new];
-    _lblCenterTip.font = [UIFont boldSystemFontOfSize:20];
+    _lblCenterTip.font = [UIFont fontWithName:FONT_REGULAR size:20];//[UIFont boldSystemFontOfSize:20];
     _lblCenterTip.textColor = [UIColor whiteColor];
     _lblCenterTip.numberOfLines = 0;
     _lblCenterTip.textAlignment = NSTextAlignmentCenter;
@@ -196,7 +200,7 @@ typedef enum {
     
     /////
     _lblTeam1 = [UILabel new];
-    _lblTeam1.font = [UIFont boldSystemFontOfSize:13];
+    _lblTeam1.font = [UIFont fontWithName:FONT_REGULAR size:13];//[UIFont boldSystemFontOfSize:13];
     _lblTeam1.textColor = [UIColor whiteColor];
     _lblTeam1.numberOfLines = 2;
     _lblTeam1.textAlignment = NSTextAlignmentCenter;
@@ -207,7 +211,7 @@ typedef enum {
     
     
     _lblTeam2 = [UILabel new];
-    _lblTeam2.font = [UIFont boldSystemFontOfSize:13];
+    _lblTeam2.font = [UIFont fontWithName:FONT_REGULAR size:13];//[UIFont boldSystemFontOfSize:13];
     _lblTeam2.textColor = [UIColor whiteColor];
     _lblTeam2.numberOfLines = 2;
     _lblTeam2.textAlignment = NSTextAlignmentCenter;
@@ -228,7 +232,7 @@ typedef enum {
     
     
     ////
-    [self nextRoundAction];
+    [self playAgainAction];
 }
 
 
@@ -318,10 +322,14 @@ typedef enum {
     if (aProgress >= 1.f) {
         
         DLog(@"Wins!");
+        [MCSoundBoard playSoundForKey:@"win"];
+        
         [self showTeamWins:(aProgressView == _viewTeam1Progress)];
         
     } else {
         DLog(@"Next Round");
+        [MCSoundBoard playSoundForKey:@"selected"];
+        
         if (_gameState == kGameStateShowTimeUp) {
             [self showNextRound:(aProgressView == _viewTeam1Progress)];
         }
@@ -344,6 +352,8 @@ typedef enum {
 }
 
 -(void)playAgainAction {
+    [MCSoundBoard playSoundForKey:@"opener"];
+    
     [_viewTeam1Progress reset];
     [_viewTeam2Progress reset];
     

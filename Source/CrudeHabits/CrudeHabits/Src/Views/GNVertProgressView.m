@@ -46,6 +46,7 @@
 
 -(void)tapAction:(id)sender {
     if (_progress < 1.f && [_delegate progressViewShouldChangeProgress:self]) {
+        
         _progress += .2f;
         
         [self updateBarHeight];

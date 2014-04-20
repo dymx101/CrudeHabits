@@ -63,7 +63,8 @@ _Pragma("clang diagnostic pop") \
 #define LocalString(key)    NSLocalizedString(key, nil);
 
 #define SPONGE_BOB_URL      (@"http://3.bp.blogspot.com/-ieEJjbD_4oE/TpdN-hGRLrI/AAAAAAAADUU/Jv_n5Lo7ZVs/s1600/fruit.jpg")
-
+#define FONT_REGULAR        @"Montserrat-Regular"
+#define FONT_BOLD           @"Montserrat-Bold"
 
 
 #define ADD_DYNAMIC_PROPERTY(PROPERTY_TYPE,PROPERTY_NAME,SETTER_NAME) \

@@ -10,9 +10,46 @@
 
 @implementation GNAppDelegate
 
+-(void)findFonts {
+    NSDictionary* infoDict = [[NSBundle mainBundle] infoDictionary];
+    NSArray* fontFiles = [infoDict objectForKey:@"UIAppFonts"];
+    
+    for (NSString *fontFile in fontFiles) {
+        
+        NSLog(@"file name: %@", fontFile);
+        NSURL *url = [[NSBundle mainBundle] URLForResource:fontFile withExtension:NULL];
+        NSData *fontData = [NSData dataWithContentsOfURL:url];
+        CGDataProviderRef fontDataProvider = CGDataProviderCreateWithCFData((__bridge CFDataRef)fontData);
+        CGFontRef loadedFont = CGFontCreateWithDataProvider(fontDataProvider);
+        NSString *fullName = CFBridgingRelease(CGFontCopyFullName(loadedFont));
+        CGFontRelease(loadedFont);
+        CGDataProviderRelease(fontDataProvider);
+        NSLog(@"font name: [%@]", fullName);
+    }
+    
+    
+    for(NSString *fontfamilyname in [UIFont familyNames])
+    {
+        NSLog(@"family:'%@'",fontfamilyname);
+        for(NSString *fontName in [UIFont fontNamesForFamilyName:fontfamilyname])
+        {
+            NSLog(@"\tfont:'%@'",fontName);
+        }
+        NSLog(@"-------------");
+    }
+    
+}
+
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    //[self findFonts];
+    
+    [MCSoundBoard addSoundAtPath:[[NSBundle mainBundle] pathForResource:@"win.wav" ofType:nil] forKey:@"win"];
+    [MCSoundBoard addSoundAtPath:[[NSBundle mainBundle] pathForResource:@"selected.wav" ofType:nil] forKey:@"selected"];
+    [MCSoundBoard addSoundAtPath:[[NSBundle mainBundle] pathForResource:@"opener.wav" ofType:nil] forKey:@"opener"];
+    
     return YES;
 }
 							

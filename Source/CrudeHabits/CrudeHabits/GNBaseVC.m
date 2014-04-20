@@ -23,7 +23,7 @@
 	self.view.backgroundColor = [FDColor sharedInstance].themeRed;
     
     _lblTitle = [UILabel new];
-    _lblTitle.font = [UIFont boldSystemFontOfSize:20];
+    _lblTitle.font = [UIFont fontWithName:FONT_REGULAR size:20];//[UIFont boldSystemFontOfSize:20];
     _lblTitle.textColor = [UIColor whiteColor];
     _lblTitle.text = @"Crude Habits";
     [self.view addSubview:_lblTitle];
