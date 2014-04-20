@@ -37,6 +37,9 @@ typedef enum {
     CGFloat                     _tickInterval;
     
     GameState                   _gameState;
+    
+    NSArray                     *_words;
+    NSString                    *_word;
 }
 
 @property (nonatomic, strong)     UIButton    *btnNext;
@@ -51,8 +54,10 @@ typedef enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _timeCountMax = 3.f;
+    _timeCountMax = 10.f;
     _tickInterval = 0.1f;
+    
+    _words = @[@"Twerking", @"Moonwalk", @"LOL", @"Bookworm", @"Snicker"];
     
     
     _lblWord = [UILabel new];
@@ -190,11 +195,13 @@ typedef enum {
     [_lblTeam2 constrainTopSpaceToView:_viewTeam2Progress predicate:@"5"];
     
     
-    ////
-    [self startTicking];
-    
     
     [_btnNextRound addTarget:self action:@selector(nextRoundAction) forControlEvents:UIControlEventTouchUpInside];
+    [_btnNext addTarget:self action:@selector(nextWordAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    ////
+    [self nextRoundAction];
 }
 
 
@@ -220,8 +227,22 @@ typedef enum {
     }
 }
 
+
+-(void)changeWord {
+    NSString *oldWord = _word;
+    
+    while (_word.length <= 0 || [oldWord isEqualToString:_word]) {
+        int rand = arc4random_uniform(_words.count);
+        _word = _words[rand];
+    }
+    
+    _lblWord.text = _word;
+}
+
 -(void)showPlaying {
-    _lblWord.text = @"Twerking";
+    
+    [self changeWord];
+    
     _viewCircularTimer.hidden = NO;
     [self startTicking];
     _btnNext.hidden = NO;
@@ -282,6 +303,10 @@ typedef enum {
 #pragma mark - actions
 -(void)nextRoundAction {
     [self showPlaying];
+}
+
+-(void)nextWordAction {
+    [self changeWord];
 }
 
 @end
