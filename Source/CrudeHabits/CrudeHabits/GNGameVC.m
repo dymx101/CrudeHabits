@@ -54,7 +54,7 @@ typedef enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _timeCountMax = 10.f;
+    _timeCountMax = 3.f;
     _tickInterval = 0.1f;
     
     _words = @[@"Twerking", @"Moonwalk", @"LOL", @"Bookworm", @"Snicker"];
@@ -198,6 +198,8 @@ typedef enum {
     
     [_btnNextRound addTarget:self action:@selector(nextRoundAction) forControlEvents:UIControlEventTouchUpInside];
     [_btnNext addTarget:self action:@selector(nextWordAction) forControlEvents:UIControlEventTouchUpInside];
+    [_btnPlayAgain addTarget:self action:@selector(playAgainAction) forControlEvents:UIControlEventTouchUpInside];
+    [_btnCategory addTarget:self action:@selector(categoriesAction) forControlEvents:UIControlEventTouchUpInside];
     
     
     ////
@@ -247,6 +249,8 @@ typedef enum {
     [self startTicking];
     _btnNext.hidden = NO;
     _btnNextRound.hidden = YES;
+    _btnPlayAgain.hidden = YES;
+    _btnCategory.hidden = YES;
     
     _gameState = kGameStatePlaying;
 }
@@ -307,6 +311,18 @@ typedef enum {
 
 -(void)nextWordAction {
     [self changeWord];
+    [self startTicking];
+}
+
+-(void)playAgainAction {
+    [_viewTeam1Progress reset];
+    [_viewTeam2Progress reset];
+    
+    [self showPlaying];
+}
+
+-(void)categoriesAction {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -21,4 +21,6 @@
 
 @interface GNVertProgressView : UIView
 @property (nonatomic, weak) id<GNVertProgressViewDelegate>  delegate;
+
+-(void)reset;
 @end

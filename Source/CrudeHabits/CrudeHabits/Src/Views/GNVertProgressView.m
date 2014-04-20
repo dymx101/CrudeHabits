@@ -35,8 +35,7 @@
         [_progressBar alignLeading:@"0" trailing:@"0" toView:self];
         [_progressBar alignBottomEdgeWithView:self predicate:@"0"];
         
-        _constraintProgressHeight = [NSLayoutConstraint constraintWithItem:_progressBar attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeHeight multiplier:0 constant:0];
-        [self addConstraint:_constraintProgressHeight];
+        [self updateBarHeight];
         
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
         [self addGestureRecognizer:tap];
@@ -49,13 +48,23 @@
     if (_progress < 1.f && [_delegate progressViewShouldChangeProgress:self]) {
         _progress += .2f;
         
-        [self removeConstraint:_constraintProgressHeight];
-        _constraintProgressHeight = [NSLayoutConstraint constraintWithItem:_progressBar attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeHeight multiplier:_progress constant:0];
-        [self addConstraint:_constraintProgressHeight];
+        [self updateBarHeight];
         
         [_delegate progressView:self progressChanged:_progress];
     }
 }
 
+
+-(void)reset {
+    _progress = 0;
+    
+    [self updateBarHeight];
+}
+
+-(void)updateBarHeight {
+    [self removeConstraint:_constraintProgressHeight];
+    _constraintProgressHeight = [NSLayoutConstraint constraintWithItem:_progressBar attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeHeight multiplier:_progress constant:0];
+    [self addConstraint:_constraintProgressHeight];
+}
 
 @end
