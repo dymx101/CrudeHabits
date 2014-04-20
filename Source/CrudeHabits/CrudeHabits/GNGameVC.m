@@ -15,6 +15,7 @@ typedef enum {
     , kGameStatePaused
     , kGameStateShowTimeUp
     , kGameStateShowNextRound
+    , kGameStateShowWin
 }GameState;
 
 
@@ -40,6 +41,8 @@ typedef enum {
 
 @property (nonatomic, strong)     UIButton    *btnNext;
 @property (nonatomic, strong)     UIButton    *btnNextRound;
+@property (nonatomic, strong)     UIButton    *btnPlayAgain;
+@property (nonatomic, strong)     UIButton    *btnCategory;
 
 @end
 
@@ -48,7 +51,7 @@ typedef enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _timeCountMax = 10.f;
+    _timeCountMax = 3.f;
     _tickInterval = 0.1f;
     
     
@@ -102,6 +105,35 @@ typedef enum {
     [_btnNextRound constrainWidth:@"200" height:@"45"];
     [_btnNextRound alignCenterXWithView:self.view predicate:@"0"];
     [_btnNextRound constrainTopSpaceToView:_lblWord predicate:@"230"];
+    
+    
+    //////
+    _btnPlayAgain = [UIButton new];
+    _btnPlayAgain.backgroundColor = [UIColor whiteColor];
+    _btnPlayAgain.titleLabel.font = [UIFont boldSystemFontOfSize:30];
+    [_btnPlayAgain setTitleColor:[FDColor sharedInstance].themeRed forState:UIControlStateNormal];
+    [_btnPlayAgain setTitle:@"Play Again" forState:UIControlStateNormal];
+    _btnPlayAgain.layer.cornerRadius = 10.f;
+    [self.view addSubview:_btnPlayAgain];
+    _btnPlayAgain.hidden = YES;
+    
+    [_btnPlayAgain constrainWidth:@"200" height:@"45"];
+    [_btnPlayAgain alignCenterXWithView:self.view predicate:@"0"];
+    [_btnPlayAgain constrainTopSpaceToView:_lblWord predicate:@"100"];
+    
+    
+    _btnCategory = [UIButton new];
+    _btnCategory.backgroundColor = [UIColor whiteColor];
+    _btnCategory.titleLabel.font = [UIFont boldSystemFontOfSize:30];
+    [_btnCategory setTitleColor:[FDColor sharedInstance].themeRed forState:UIControlStateNormal];
+    [_btnCategory setTitle:@"Categories" forState:UIControlStateNormal];
+    _btnCategory.layer.cornerRadius = 10.f;
+    [self.view addSubview:_btnCategory];
+    _btnCategory.hidden = YES;
+    
+    [_btnCategory constrainWidth:@"200" height:@"45"];
+    [_btnCategory alignCenterXWithView:self.view predicate:@"0"];
+    [_btnCategory constrainTopSpaceToView:_btnPlayAgain predicate:@"20"];
     
     
     /////
@@ -160,12 +192,16 @@ typedef enum {
     
     ////
     [self startTicking];
+    
+    
+    [_btnNextRound addTarget:self action:@selector(nextRoundAction) forControlEvents:UIControlEventTouchUpInside];
 }
 
 
 #pragma mark -
 -(void)startTicking {
     _timeCount = 0;
+    _viewCircularTimer.progress = 0;
     [_timer invalidate];
     _timer = [NSTimer scheduledTimerWithTimeInterval:_tickInterval target:self selector:@selector(tick:) userInfo:nil repeats:YES];
 }
@@ -184,6 +220,15 @@ typedef enum {
     }
 }
 
+-(void)showPlaying {
+    _lblWord.text = @"Twerking";
+    _viewCircularTimer.hidden = NO;
+    [self startTicking];
+    _btnNext.hidden = NO;
+    _btnNextRound.hidden = YES;
+    
+    _gameState = kGameStatePlaying;
+}
 
 -(void)showTimeIsUp {
     _lblWord.text = @"TIME'S UP!";
@@ -203,15 +248,24 @@ typedef enum {
     _gameState = kGameStateShowNextRound;
 }
 
+-(void)showTeamWins:(BOOL)aTeam1Wins {
+    _lblWord.text = aTeam1Wins ? @"Team 1\nWins!" : @"Team 2\nWins!";
+    _btnNextRound.hidden = YES;
+    _btnPlayAgain.hidden = NO;
+    _btnCategory.hidden = NO;
+    _lblCenterTip.hidden = YES;
+    
+    _gameState = kGameStateShowWin;
+}
+
 
 #pragma mark - progress view delegate
 -(void)progressView:(GNVertProgressView *)aProgressView progressChanged:(CGFloat)aProgress {
     if (aProgress >= 1.f) {
-        if (aProgressView == _viewTeam1Progress) {
-            DLog(@"Team 1 wins!");
-        } else if (aProgressView == _viewTeam2Progress) {
-            DLog(@"Team 2 wins!");
-        }
+        
+        DLog(@"Wins!");
+        [self showTeamWins:(aProgressView == _viewTeam1Progress)];
+        
     } else {
         DLog(@"Next Round");
         if (_gameState == kGameStateShowTimeUp) {
@@ -222,6 +276,12 @@ typedef enum {
 
 -(BOOL)progressViewShouldChangeProgress:(GNVertProgressView *)aProgressView {
     return (_gameState == kGameStateShowTimeUp);
+}
+
+
+#pragma mark - actions
+-(void)nextRoundAction {
+    [self showPlaying];
 }
 
 @end
