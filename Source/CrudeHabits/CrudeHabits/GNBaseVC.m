@@ -10,7 +10,6 @@
 
 
 @interface GNBaseVC () {
-    UILabel         *_lblTitle;
 
 }
 

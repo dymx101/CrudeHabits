@@ -27,6 +27,8 @@
 		EA3B00FD1901F5D400C63D9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B00DF1901F5D400C63D9D /* UIKit.framework */; };
 		EA3B01051901F5D400C63D9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA3B01031901F5D400C63D9D /* InfoPlist.strings */; };
 		EA3B01071901F5D400C63D9D /* CrudeHabitsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3B01061901F5D400C63D9D /* CrudeHabitsTests.m */; };
+		EA3B036719036D4C009F9500 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B036519036D4C009F9500 /* play@2x.png */; };
+		EA3B036819036D4C009F9500 /* pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3B036619036D4C009F9500 /* pause@2x.png */; };
 		EA5386B51901F72C00860802 /* FDColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5386B41901F72C00860802 /* FDColor.m */; };
 		EA5386B81901F75200860802 /* FDDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5386B71901F75200860802 /* FDDefine.m */; };
 		EA7B977B19027E0600975117 /* GNVertProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B977A19027E0600975117 /* GNVertProgressView.m */; };
@@ -74,6 +76,8 @@
 		EA3B01021901F5D400C63D9D /* CrudeHabitsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrudeHabitsTests-Info.plist"; sourceTree = "<group>"; };
 		EA3B01041901F5D400C63D9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA3B01061901F5D400C63D9D /* CrudeHabitsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrudeHabitsTests.m; sourceTree = "<group>"; };
+		EA3B036519036D4C009F9500 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
+		EA3B036619036D4C009F9500 /* pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause@2x.png"; sourceTree = "<group>"; };
 		EA5386B31901F72C00860802 /* FDColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDColor.h; sourceTree = "<group>"; };
 		EA5386B41901F72C00860802 /* FDColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDColor.m; sourceTree = "<group>"; };
 		EA5386B61901F75200860802 /* FDDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDDefine.h; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 		EA5386B11901F71A00860802 /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				EA3B036519036D4C009F9500 /* play@2x.png */,
+				EA3B036619036D4C009F9500 /* pause@2x.png */,
 				EA27B0FE190226D90086DC70 /* Views */,
 				EA5386B21901F71A00860802 /* Utils */,
 			);
@@ -304,6 +310,8 @@
 			files = (
 				EA3B00F41901F5D400C63D9D /* Images.xcassets in Resources */,
 				EA3B00E61901F5D400C63D9D /* InfoPlist.strings in Resources */,
+				EA3B036819036D4C009F9500 /* pause@2x.png in Resources */,
+				EA3B036719036D4C009F9500 /* play@2x.png in Resources */,
 				EA3B00EF1901F5D400C63D9D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

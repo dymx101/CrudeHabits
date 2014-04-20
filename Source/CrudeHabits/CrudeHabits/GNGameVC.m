@@ -23,6 +23,9 @@ typedef enum {
     UILabel                 *_lblWord;
     UILabel                 *_lblCenterTip;
     
+    UIImageView             *_ivPlayPause;
+    UIView                  *_viewPauseBlock;
+    
     GNVertProgressView      *_viewTeam1Progress;
     GNVertProgressView      *_viewTeam2Progress;
     
@@ -37,6 +40,7 @@ typedef enum {
     CGFloat                     _tickInterval;
     
     GameState                   _gameState;
+    BOOL                        _isGamePaused;
     
     NSArray                     *_words;
     NSString                    *_word;
@@ -70,6 +74,24 @@ typedef enum {
     [_lblWord alignCenterXWithView:self.view predicate:nil];
     [_lblWord alignTopEdgeWithView:self.view predicate:@"140"];
     
+    
+    ////
+    
+    _viewPauseBlock = [UIView new];
+    _viewPauseBlock.backgroundColor = [UIColor colorWithWhite:1 alpha:.5];
+    [self.view addSubview:_viewPauseBlock];
+    [_viewPauseBlock alignToView:self.view];
+    _viewPauseBlock.hidden = YES;
+    
+    _ivPlayPause = [UIImageView new];
+    _ivPlayPause.image = [UIImage imageNamed:@"pause"];
+    [self.view addSubview:_ivPlayPause];
+    [_ivPlayPause alignCenterYWithView:self.lblTitle predicate:nil];
+    [_ivPlayPause alignTrailingEdgeWithView:self.view predicate:@"-10"];
+    [_ivPlayPause constrainWidth:@"30" height:@"30"];
+    _ivPlayPause.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapPlayPause = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playPauseAction)];
+    [_ivPlayPause addGestureRecognizer:tapPlayPause];
     
     
     _viewCircularTimer = [BKECircularProgressView new];//[[BKECircularProgressView alloc] initWithFrame:CGRectMake(110, 100, 100, 100)];
@@ -195,6 +217,9 @@ typedef enum {
     [_lblTeam2 constrainTopSpaceToView:_viewTeam2Progress predicate:@"5"];
     
     
+    [self.view bringSubviewToFront:_viewPauseBlock];
+    [self.view bringSubviewToFront:_ivPlayPause];
+    
     
     [_btnNextRound addTarget:self action:@selector(nextRoundAction) forControlEvents:UIControlEventTouchUpInside];
     [_btnNext addTarget:self action:@selector(nextWordAction) forControlEvents:UIControlEventTouchUpInside];
@@ -251,6 +276,7 @@ typedef enum {
     _btnNextRound.hidden = YES;
     _btnPlayAgain.hidden = YES;
     _btnCategory.hidden = YES;
+    _ivPlayPause.hidden = NO;
     
     _gameState = kGameStatePlaying;
 }
@@ -260,6 +286,7 @@ typedef enum {
     _viewCircularTimer.hidden = YES;
     _btnNext.hidden = YES;
     _lblCenterTip.hidden = NO;
+    _ivPlayPause.hidden = YES;
     
     _gameState = kGameStateShowTimeUp;
 }
@@ -269,6 +296,7 @@ typedef enum {
     _lblWord.text = aTeam1Won ? @"Go Team 1!" : @"Go Team 2!";
     _lblCenterTip.hidden = YES;
     _btnNextRound.hidden = NO;
+    _ivPlayPause.hidden = YES;
     
     _gameState = kGameStateShowNextRound;
 }
@@ -279,6 +307,7 @@ typedef enum {
     _btnPlayAgain.hidden = NO;
     _btnCategory.hidden = NO;
     _lblCenterTip.hidden = YES;
+    _ivPlayPause.hidden = YES;
     
     _gameState = kGameStateShowWin;
 }
@@ -323,6 +352,23 @@ typedef enum {
 
 -(void)categoriesAction {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)playPauseAction {
+    _isGamePaused = !_isGamePaused;
+    _isGamePaused ? [self pauseAction] : [self resumeAction];
+}
+
+-(void)pauseAction {
+    [_timer setFireDate:[NSDate distantFuture]];
+    _ivPlayPause.image = [UIImage imageNamed:@"play"];
+    _viewPauseBlock.hidden = NO;
+}
+
+-(void)resumeAction {
+    [_timer setFireDate:[NSDate date]];
+    _ivPlayPause.image = [UIImage imageNamed:@"pause"];
+    _viewPauseBlock.hidden = YES;
 }
 
 @end

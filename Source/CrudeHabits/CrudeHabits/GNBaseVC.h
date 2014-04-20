@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface GNBaseVC : UIViewController
-
+@property (nonatomic, strong)     UILabel         *lblTitle;
 @end
