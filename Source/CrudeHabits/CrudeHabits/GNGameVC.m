@@ -8,6 +8,8 @@
 
 #import "GNGameVC.h"
 #import "GNVertProgressView.h"
+#import "FDDefine.h"
+#import "FDColor.h"
 #import <BKECircularProgressView/BKECircularProgressView.h>
 
 typedef enum {
@@ -62,7 +64,7 @@ typedef enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _timeCountMax = 10.f;
+    _timeCountMax = 50.f;
     _tickInterval = 0.1f;
     
     _words = @[@"Twerking", @"Moonwalk", @"LOL", @"Bookworm", @"Snicker"];
@@ -253,12 +255,20 @@ typedef enum {
 
 
 #pragma mark -
+-(void)stopTicking {
+    
+    [_timer invalidate];
+    _timer = nil;
+}
+
 -(void)startTicking {
+    
+    [self stopTicking];
+    
     _timeCount = 0;
     _viewCircularTimer.progress = 0;
-    [_timer invalidate];
+    
     _timer = [NSTimer scheduledTimerWithTimeInterval:_tickInterval target:self selector:@selector(tick:) userInfo:nil repeats:YES];
-    [MCSoundBoard playAudioForKey:@"tick"];
 }
 
 -(void)tick:(id)sender {
@@ -286,8 +296,7 @@ typedef enum {
     
     if (_timeCount >= _timeCountMax) {
         DLog(@"Time is up!");
-        [_timer invalidate];
-        _timer = nil;
+        [self stopTicking];
         
         [self showTimeIsUp];
         [MCSoundBoard playAudioForKey:@"alarm"];
@@ -336,7 +345,11 @@ typedef enum {
     _lblWord.text = aTeam1Won ? @"Go Team 1!" : @"Go Team 2!";
     _lblCenterTip.hidden = YES;
     _btnNextRound.hidden = NO;
+    _btnNext.hidden = YES;
     _ivPlayPause.hidden = YES;
+    
+    _viewCircularTimer.hidden = YES;
+    [self stopTicking];
     
     _gameState = kGameStateShowNextRound;
 }
@@ -366,14 +379,14 @@ typedef enum {
         DLog(@"Next Round");
         [MCSoundBoard playSoundForKey:@"selected"];
         
-        if (_gameState == kGameStateShowTimeUp) {
+        if (_gameState == kGameStateShowTimeUp || _gameState == kGameStatePlaying) {
             [self showNextRound:(aProgressView == _viewTeam1Progress)];
         }
     }
 }
 
 -(BOOL)progressViewShouldChangeProgress:(GNVertProgressView *)aProgressView {
-    return (_gameState == kGameStateShowTimeUp);
+    return (_gameState == kGameStateShowTimeUp || _gameState == kGameStatePlaying);
 }
 
 
