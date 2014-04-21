@@ -23,4 +23,5 @@
 @property (nonatomic, weak) id<GNVertProgressViewDelegate>  delegate;
 
 -(void)reset;
+-(void)tapAction:(id)sender;
 @end

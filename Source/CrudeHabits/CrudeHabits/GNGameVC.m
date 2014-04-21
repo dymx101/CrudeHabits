@@ -27,7 +27,10 @@ typedef enum {
     UIView                  *_viewPauseBlock;
     
     GNVertProgressView      *_viewTeam1Progress;
+    UIView                  *_viewTeam1ProgressBG;
+    
     GNVertProgressView      *_viewTeam2Progress;
+    UIView                  *_viewTeam2ProgressBG;
     
     UILabel                 *_lblTeam1;
     UILabel                 *_lblTeam2;
@@ -59,7 +62,7 @@ typedef enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _timeCountMax = 50.f;
+    _timeCountMax = 10.f;
     _tickInterval = 0.1f;
     
     _words = @[@"Twerking", @"Moonwalk", @"LOL", @"Bookworm", @"Snicker"];
@@ -183,13 +186,24 @@ typedef enum {
     
     
     ////////
+    _viewTeam1ProgressBG = [UIView new];
+    [self.view addSubview:_viewTeam1ProgressBG];
+    UITapGestureRecognizer *tapTeam1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTeam1Action:)];
+    [_viewTeam1ProgressBG addGestureRecognizer:tapTeam1];
+    
+    
     _viewTeam1Progress = [GNVertProgressView new];
     _viewTeam1Progress.delegate = self;
     [self.view addSubview:_viewTeam1Progress];
     [_viewTeam1Progress constrainWidth:@"20" height:@"260"];
     [_viewTeam1Progress alignLeadingEdgeWithView:self.view predicate:@"20"];
     [_viewTeam1Progress alignBottomEdgeWithView:self.view predicate:@"-80"];
+    [_viewTeam1ProgressBG alignTop:@"0" leading:@"-20" bottom:@"40" trailing:@"20" toView:_viewTeam1Progress];
     
+    _viewTeam2ProgressBG = [UIView new];
+    [self.view addSubview:_viewTeam2ProgressBG];
+    UITapGestureRecognizer *tapTeam2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTeam2Action:)];
+    [_viewTeam2ProgressBG addGestureRecognizer:tapTeam2];
     
     _viewTeam2Progress = [GNVertProgressView new];
     _viewTeam2Progress.delegate = self;
@@ -197,6 +211,7 @@ typedef enum {
     [_viewTeam2Progress constrainWidth:@"20" height:@"260"];
     [_viewTeam2Progress alignTrailingEdgeWithView:self.view predicate:@"-20"];
     [_viewTeam2Progress alignBottomEdgeWithView:self.view predicate:@"-80"];
+    [_viewTeam2ProgressBG alignTop:@"0" leading:@"-20" bottom:@"40" trailing:@"20" toView:_viewTeam2Progress];
     
     
     /////
@@ -400,6 +415,14 @@ typedef enum {
     [_timer setFireDate:[NSDate date]];
     _ivPlayPause.image = [UIImage imageNamed:@"pause"];
     _viewPauseBlock.hidden = YES;
+}
+
+-(void)tapTeam1Action:(id)sender {
+    [_viewTeam1Progress tapAction:nil];
+}
+
+-(void)tapTeam2Action:(id)sender {
+    [_viewTeam2Progress tapAction:nil];
 }
 
 @end
