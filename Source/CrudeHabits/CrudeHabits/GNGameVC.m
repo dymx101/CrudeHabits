@@ -34,10 +34,11 @@ typedef enum {
     
     BKECircularProgressView       *_viewCircularTimer;
     
-    NSTimer                       *_timer;
+    NSTimer                     *_timer;
     CGFloat                     _timeCount;
     CGFloat                     _timeCountMax;
     CGFloat                     _tickInterval;
+    CGFloat                     _tickCount;
     
     GameState                   _gameState;
     BOOL                        _isGamePaused;
@@ -58,7 +59,7 @@ typedef enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _timeCountMax = 5.f;
+    _timeCountMax = 50.f;
     _tickInterval = 0.1f;
     
     _words = @[@"Twerking", @"Moonwalk", @"LOL", @"Bookworm", @"Snicker"];
@@ -99,8 +100,8 @@ typedef enum {
     
     
     _viewCircularTimer = [BKECircularProgressView new];//[[BKECircularProgressView alloc] initWithFrame:CGRectMake(110, 100, 100, 100)];
-    _viewCircularTimer.progressTintColor = [UIColor whiteColor];
-    _viewCircularTimer.backgroundTintColor = [FDColor sharedInstance].themeRed;
+    _viewCircularTimer.progressTintColor = [FDColor sharedInstance].themeRed;
+    _viewCircularTimer.backgroundTintColor = [UIColor whiteColor];
     _viewCircularTimer.lineWidth = 7.f;
 
     [self.view addSubview:_viewCircularTimer];
@@ -242,12 +243,31 @@ typedef enum {
     _viewCircularTimer.progress = 0;
     [_timer invalidate];
     _timer = [NSTimer scheduledTimerWithTimeInterval:_tickInterval target:self selector:@selector(tick:) userInfo:nil repeats:YES];
+    [MCSoundBoard playAudioForKey:@"tick"];
 }
 
 -(void)tick:(id)sender {
     _timeCount += _tickInterval;
     _viewCircularTimer.progress = ((CGFloat)_timeCount / _timeCountMax);
-    //DLog(@"progress:%f", _viewCircularTimer.progress);
+
+    BOOL needPlayTickSound = NO;
+    _tickCount += _tickInterval;
+    if (_timeCount / _timeCountMax > 0.75f) {
+        if (_tickCount > 0.5) {
+            _tickCount = 0;
+            needPlayTickSound = YES;
+        }
+    } else {
+        if (_tickCount > 1.0) {
+            _tickCount = 0;
+            needPlayTickSound = YES;
+        }
+    }
+    
+    if (needPlayTickSound) {
+        [MCSoundBoard playAudioForKey:@"tick"];
+    }
+    
     
     if (_timeCount >= _timeCountMax) {
         DLog(@"Time is up!");
@@ -255,6 +275,7 @@ typedef enum {
         _timer = nil;
         
         [self showTimeIsUp];
+        [MCSoundBoard playAudioForKey:@"alarm"];
     }
 }
 
@@ -263,7 +284,7 @@ typedef enum {
     NSString *oldWord = _word;
     
     while (_word.length <= 0 || [oldWord isEqualToString:_word]) {
-        int rand = arc4random_uniform(_words.count);
+        int rand = arc4random_uniform((u_int32_t)_words.count);
         _word = _words[rand];
     }
     
@@ -348,7 +369,7 @@ typedef enum {
 
 -(void)nextWordAction {
     [self changeWord];
-    [self startTicking];
+    [MCSoundBoard playAudioForKey:@"switch"];
 }
 
 -(void)playAgainAction {

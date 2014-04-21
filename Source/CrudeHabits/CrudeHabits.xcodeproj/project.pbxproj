@@ -50,6 +50,9 @@
 		EA5A51371903855200E9C49B /* selected.wav in Resources */ = {isa = PBXBuildFile; fileRef = EA5A51361903855200E9C49B /* selected.wav */; };
 		EA5A5139190385A000E9C49B /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = EA5A5138190385A000E9C49B /* win.wav */; };
 		EA5A513B190385FB00E9C49B /* opener.wav in Resources */ = {isa = PBXBuildFile; fileRef = EA5A513A190385FB00E9C49B /* opener.wav */; };
+		EA7664A91904FF9D00EB280C /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA7664A81904FF9D00EB280C /* tick.mp3 */; };
+		EA7664AB190505E800EB280C /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA7664AA190505E800EB280C /* alarm.mp3 */; };
+		EA7664AD1905072900EB280C /* switch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA7664AC1905072900EB280C /* switch.mp3 */; };
 		EA7B977B19027E0600975117 /* GNVertProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B977A19027E0600975117 /* GNVertProgressView.m */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +124,9 @@
 		EA5A51361903855200E9C49B /* selected.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = selected.wav; sourceTree = "<group>"; };
 		EA5A5138190385A000E9C49B /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
 		EA5A513A190385FB00E9C49B /* opener.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = opener.wav; sourceTree = "<group>"; };
+		EA7664A81904FF9D00EB280C /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
+		EA7664AA190505E800EB280C /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
+		EA7664AC1905072900EB280C /* switch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = switch.mp3; sourceTree = "<group>"; };
 		EA7B977919027E0600975117 /* GNVertProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNVertProgressView.h; sourceTree = "<group>"; };
 		EA7B977A19027E0600975117 /* GNVertProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNVertProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +170,9 @@
 		EA3B00CF1901F5D400C63D9D = {
 			isa = PBXGroup;
 			children = (
+				EA7664AC1905072900EB280C /* switch.mp3 */,
+				EA7664AA190505E800EB280C /* alarm.mp3 */,
+				EA7664A81904FF9D00EB280C /* tick.mp3 */,
 				EA5A513A190385FB00E9C49B /* opener.wav */,
 				EA5A5138190385A000E9C49B /* win.wav */,
 				EA5A51361903855200E9C49B /* selected.wav */,
@@ -392,6 +401,7 @@
 				EA3B037719037570009F9500 /* Dragon-icon 120.png in Resources */,
 				EA3B036819036D4C009F9500 /* pause@2x.png in Resources */,
 				EA5A513B190385FB00E9C49B /* opener.wav in Resources */,
+				EA7664AB190505E800EB280C /* alarm.mp3 in Resources */,
 				EA3B03871903775E009F9500 /* Montserrat-Regular.ttf in Resources */,
 				EA3B037D19037570009F9500 /* Icon-72.png in Resources */,
 				EA3B037E19037570009F9500 /* Icon-80.png in Resources */,
@@ -400,9 +410,11 @@
 				EA5A5139190385A000E9C49B /* win.wav in Resources */,
 				EA3B036719036D4C009F9500 /* play@2x.png in Resources */,
 				EA3B00EF1901F5D400C63D9D /* Main.storyboard in Resources */,
+				EA7664A91904FF9D00EB280C /* tick.mp3 in Resources */,
 				EA3B03861903775E009F9500 /* Montserrat-Bold.ttf in Resources */,
 				EA3B037A19037570009F9500 /* Dragon-icon 76.png in Resources */,
 				EA3B037B19037570009F9500 /* Icon-100.png in Resources */,
+				EA7664AD1905072900EB280C /* switch.mp3 in Resources */,
 				EA3B038119037570009F9500 /* Icon-Small@2x.png in Resources */,
 				EA3B037C19037570009F9500 /* Icon-40.png in Resources */,
 				EA3B037919037570009F9500 /* Dragon-icon 152.png in Resources */,
@@ -593,12 +605,12 @@
 			baseConfigurationReference = 4C3489E583DE4777BF135656 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Luosheng Peng (75BAGEK59M)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrudeHabits/CrudeHabits-Prefix.pch";
 				INFOPLIST_FILE = "CrudeHabits/CrudeHabits-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "31DB401A-4151-426F-9C2B-9A040389E8F5";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -608,12 +620,12 @@
 			baseConfigurationReference = 4C3489E583DE4777BF135656 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: GageIn, Inc (2L7KL2QHQ3)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrudeHabits/CrudeHabits-Prefix.pch";
 				INFOPLIST_FILE = "CrudeHabits/CrudeHabits-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "31DB401A-4151-426F-9C2B-9A040389E8F5";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
