@@ -113,7 +113,7 @@ typedef enum {
 //    _viewCircularTimer.backgroundTintColor = [FDColor sharedInstance].themeRed;
     
     
-    _viewCircularTimer.lineWidth = 7.f;
+    _viewCircularTimer.lineWidth = 8.f;
 
     [self.view addSubview:_viewCircularTimer];
     [_viewCircularTimer alignCenterXWithView:self.view predicate:@"0"];
@@ -367,6 +367,9 @@ typedef enum {
     _btnCategory.hidden = NO;
     _lblCenterTip.hidden = YES;
     _ivPlayPause.hidden = YES;
+    
+    _viewCircularTimer.hidden = YES;
+    _btnNext.hidden = YES;
     
     _gameState = kGameStateShowWin;
 }
