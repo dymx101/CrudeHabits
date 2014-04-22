@@ -70,7 +70,7 @@
 - (void)setLineWidth:(CGFloat)lineWidth {
     _lineWidth = fmaxf(lineWidth, 1.f);
     
-    _progressBackgroundLayer.lineWidth = _lineWidth;
+    _progressBackgroundLayer.lineWidth = _lineWidth - 1;
     _progressLayer.lineWidth = _lineWidth;
 }
 
@@ -102,6 +102,7 @@
 }
 
 - (void) drawBackgroundCircle {
+    
     CGFloat startAngle = - ((float)M_PI / 2); // 90 degrees
     CGFloat endAngle = (2 * (float)M_PI) + startAngle;
     CGPoint center = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);

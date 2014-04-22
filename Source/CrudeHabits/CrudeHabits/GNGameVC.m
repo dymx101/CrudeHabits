@@ -64,7 +64,7 @@ typedef enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _timeCountMax = 50.f;
+    _timeCountMax = 12.f;
     _tickInterval = 0.1f;
     
     _words = @[@"Twerking", @"Moonwalk", @"LOL", @"Bookworm", @"Snicker"];
@@ -105,8 +105,14 @@ typedef enum {
     
     
     _viewCircularTimer = [BKECircularProgressView new];//[[BKECircularProgressView alloc] initWithFrame:CGRectMake(110, 100, 100, 100)];
+    
     _viewCircularTimer.progressTintColor = [FDColor sharedInstance].themeRed;
     _viewCircularTimer.backgroundTintColor = [UIColor whiteColor];
+    
+//    _viewCircularTimer.progressTintColor = [UIColor whiteColor];
+//    _viewCircularTimer.backgroundTintColor = [FDColor sharedInstance].themeRed;
+    
+    
     _viewCircularTimer.lineWidth = 7.f;
 
     [self.view addSubview:_viewCircularTimer];
@@ -379,14 +385,14 @@ typedef enum {
         DLog(@"Next Round");
         [MCSoundBoard playSoundForKey:@"selected"];
         
-        if (_gameState == kGameStateShowTimeUp || _gameState == kGameStatePlaying) {
+        if (_gameState == kGameStateShowTimeUp) {
             [self showNextRound:(aProgressView == _viewTeam1Progress)];
         }
     }
 }
 
 -(BOOL)progressViewShouldChangeProgress:(GNVertProgressView *)aProgressView {
-    return (_gameState == kGameStateShowTimeUp || _gameState == kGameStatePlaying);
+    return (_gameState == kGameStateShowTimeUp);
 }
 
 
