@@ -339,6 +339,7 @@ typedef enum {
     _timer = nil;
     
     [MCSoundBoard stopAudioForKey:@"quick_tick"];
+    _isPlayingQuickTick = NO;
 }
 
 -(void)startTicking {
@@ -534,16 +535,6 @@ typedef enum {
     } else {
         [self pauseAction];
     }
-    
-    if (_isGamePaused) {
-        if (_isPlayingQuickTick) {
-            [MCSoundBoard pauseAudioForKey:@"quick_tick"];
-        }
-    } else {
-        if (_isPlayingQuickTick) {
-            [MCSoundBoard playAudioForKey:@"quick_tick"];
-        }
-    }
 }
 
 -(void)pauseAction {
@@ -553,6 +544,9 @@ typedef enum {
     _viewPausePanel.hidden = YES;
     
     _isGamePaused = YES;
+    
+    [MCSoundBoard pauseAudioForKey:@"quick_tick"];
+    _isPlayingQuickTick = NO;
 }
 
 -(void)resumeAction {
