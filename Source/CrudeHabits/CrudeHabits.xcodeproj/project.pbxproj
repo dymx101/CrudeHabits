@@ -14,6 +14,7 @@
 		EA13E8841902569B004F19D4 /* GNStartGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13E8831902569B004F19D4 /* GNStartGameVC.m */; };
 		EA13E88719025B7A004F19D4 /* GNGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13E88619025B7A004F19D4 /* GNGameVC.m */; };
 		EA1812DC190645E4000B3B11 /* fast_tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA1812DB190645E4000B3B11 /* fast_tick.mp3 */; };
+		EA1812DE1906497D000B3B11 /* close_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1812DD1906497D000B3B11 /* close_white@2x.png */; };
 		EA27B1011902270B0086DC70 /* GNSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA27B1001902270B0086DC70 /* GNSplashView.m */; };
 		EA3B00DC1901F5D400C63D9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B00DB1901F5D400C63D9D /* Foundation.framework */; };
 		EA3B00DE1901F5D400C63D9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B00DD1901F5D400C63D9D /* CoreGraphics.framework */; };
@@ -81,6 +82,7 @@
 		EA13E88519025B7A004F19D4 /* GNGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNGameVC.h; sourceTree = "<group>"; };
 		EA13E88619025B7A004F19D4 /* GNGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNGameVC.m; sourceTree = "<group>"; };
 		EA1812DB190645E4000B3B11 /* fast_tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fast_tick.mp3; sourceTree = "<group>"; };
+		EA1812DD1906497D000B3B11 /* close_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_white@2x.png"; sourceTree = "<group>"; };
 		EA27B0FF1902270B0086DC70 /* GNSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNSplashView.h; sourceTree = "<group>"; };
 		EA27B1001902270B0086DC70 /* GNSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNSplashView.m; sourceTree = "<group>"; };
 		EA3B00D81901F5D400C63D9D /* CrudeHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrudeHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +176,7 @@
 		EA3B00CF1901F5D400C63D9D = {
 			isa = PBXGroup;
 			children = (
+				EA1812DD1906497D000B3B11 /* close_white@2x.png */,
 				EA1812DB190645E4000B3B11 /* fast_tick.mp3 */,
 				EA0F52CE1906094600074AF9 /* quick_tick.mp3 */,
 				EA7664AC1905072900EB280C /* switch.mp3 */,
@@ -403,6 +406,7 @@
 				EA3B00F41901F5D400C63D9D /* Images.xcassets in Resources */,
 				EA3B037F19037570009F9500 /* Icon-Small-50.png in Resources */,
 				EA3B037819037570009F9500 /* Dragon-icon 144.png in Resources */,
+				EA1812DE1906497D000B3B11 /* close_white@2x.png in Resources */,
 				EA0F52CF1906094600074AF9 /* quick_tick.mp3 in Resources */,
 				EA3B00E61901F5D400C63D9D /* InfoPlist.strings in Resources */,
 				EA3B037719037570009F9500 /* Dragon-icon 120.png in Resources */,

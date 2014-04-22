@@ -26,6 +26,7 @@ typedef enum {
     UILabel                 *_lblCenterTip;
     
     UIImageView             *_ivPlayPause;
+    UIImageView             *_ivClose;
     UIView                  *_viewPauseBlock;
     
     GNVertProgressView      *_viewTeam1Progress;
@@ -105,6 +106,20 @@ typedef enum {
     [_ivPlayPause addGestureRecognizer:tapPlayPause];
     
     
+    ///
+    _ivClose = [UIImageView new];
+    _ivClose.image = [UIImage imageNamed:@"close_white"];
+    [self.view addSubview:_ivClose];
+    [_ivClose alignCenterYWithView:self.lblTitle predicate:nil];
+    [_ivClose alignLeadingEdgeWithView:self.view predicate:@"10"];
+    [_ivClose constrainWidth:@"26" height:@"26"];
+    _ivClose.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapClose = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playPauseAction)];
+    [_ivClose addGestureRecognizer:tapClose];
+    
+    
+    
+    ///
     _viewCircularTimer = [BKECircularProgressView new];//[[BKECircularProgressView alloc] initWithFrame:CGRectMake(110, 100, 100, 100)];
     
     _viewCircularTimer.progressTintColor = [FDColor sharedInstance].themeRed;
@@ -440,6 +455,16 @@ typedef enum {
 -(void)playPauseAction {
     _isGamePaused = !_isGamePaused;
     _isGamePaused ? [self pauseAction] : [self resumeAction];
+    
+    if (_isGamePaused) {
+        if (_isPlayingQuickTick) {
+            [MCSoundBoard pauseAudioForKey:@"quick_tick"];
+        }
+    } else {
+        if (_isPlayingQuickTick) {
+            [MCSoundBoard playAudioForKey:@"quick_tick"];
+        }
+    }
 }
 
 -(void)pauseAction {
