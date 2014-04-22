@@ -44,6 +44,7 @@ typedef enum {
     CGFloat                     _timeCountMax;
     CGFloat                     _tickInterval;
     CGFloat                     _tickCount;
+    //BOOL                        _isPlayingQuickTick;
     
     GameState                   _gameState;
     BOOL                        _isGamePaused;
@@ -64,7 +65,7 @@ typedef enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _timeCountMax = 12.f;
+    _timeCountMax = 50.f;
     _tickInterval = 0.1f;
     
     _words = @[@"Twerking", @"Moonwalk", @"LOL", @"Bookworm", @"Snicker"];
@@ -265,6 +266,8 @@ typedef enum {
     
     [_timer invalidate];
     _timer = nil;
+    
+    [MCSoundBoard stopAudioForKey:@"tick"];
 }
 
 -(void)startTicking {
@@ -279,11 +282,19 @@ typedef enum {
 
 -(void)tick:(id)sender {
     _timeCount += _tickInterval;
-    _viewCircularTimer.progress = ((CGFloat)_timeCount / _timeCountMax);
+    CGFloat delta = _tickInterval * (_timeCount / 3);
+    CGFloat progress = (((CGFloat)_timeCount - delta) / _timeCountMax);
+    _viewCircularTimer.progress = progress;
 
     BOOL needPlayTickSound = NO;
     _tickCount += _tickInterval;
-    if (_timeCount / _timeCountMax > 0.75f) {
+    if (_viewCircularTimer.progress > 0.75f) {
+        if (_tickCount > 0.35) {
+            _tickCount = 0;
+            needPlayTickSound = YES;
+        }
+        
+    } else if (_viewCircularTimer.progress > 0.5f) {
         if (_tickCount > 0.5) {
             _tickCount = 0;
             needPlayTickSound = YES;

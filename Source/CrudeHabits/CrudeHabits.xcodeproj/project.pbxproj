@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7FC367DF4EA24FA5AB497FBE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ACCF2223FA47668D86F487 /* libPods.a */; };
+		EA0F52CF1906094600074AF9 /* quick_tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA0F52CE1906094600074AF9 /* quick_tick.mp3 */; };
 		EA13E87E190250DE004F19D4 /* GNSplashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13E87D190250DD004F19D4 /* GNSplashVC.m */; };
 		EA13E8811902514E004F19D4 /* GNHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13E8801902514E004F19D4 /* GNHelpVC.m */; };
 		EA13E8841902569B004F19D4 /* GNStartGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13E8831902569B004F19D4 /* GNStartGameVC.m */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		42ACCF2223FA47668D86F487 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3489E583DE4777BF135656 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		EA0F52CE1906094600074AF9 /* quick_tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quick_tick.mp3; sourceTree = "<group>"; };
 		EA13E87C190250DD004F19D4 /* GNSplashVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNSplashVC.h; sourceTree = "<group>"; };
 		EA13E87D190250DD004F19D4 /* GNSplashVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNSplashVC.m; sourceTree = "<group>"; };
 		EA13E87F1902514E004F19D4 /* GNHelpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNHelpVC.h; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		EA3B00CF1901F5D400C63D9D = {
 			isa = PBXGroup;
 			children = (
+				EA0F52CE1906094600074AF9 /* quick_tick.mp3 */,
 				EA7664AC1905072900EB280C /* switch.mp3 */,
 				EA7664AA190505E800EB280C /* alarm.mp3 */,
 				EA7664A81904FF9D00EB280C /* tick.mp3 */,
@@ -397,6 +400,7 @@
 				EA3B00F41901F5D400C63D9D /* Images.xcassets in Resources */,
 				EA3B037F19037570009F9500 /* Icon-Small-50.png in Resources */,
 				EA3B037819037570009F9500 /* Dragon-icon 144.png in Resources */,
+				EA0F52CF1906094600074AF9 /* quick_tick.mp3 in Resources */,
 				EA3B00E61901F5D400C63D9D /* InfoPlist.strings in Resources */,
 				EA3B037719037570009F9500 /* Dragon-icon 120.png in Resources */,
 				EA3B036819036D4C009F9500 /* pause@2x.png in Resources */,
