@@ -44,7 +44,7 @@ typedef enum {
     CGFloat                     _timeCountMax;
     CGFloat                     _tickInterval;
     CGFloat                     _tickCount;
-    //BOOL                        _isPlayingQuickTick;
+    BOOL                        _isPlayingQuickTick;
     
     GameState                   _gameState;
     BOOL                        _isGamePaused;
@@ -267,7 +267,7 @@ typedef enum {
     [_timer invalidate];
     _timer = nil;
     
-    [MCSoundBoard stopAudioForKey:@"tick"];
+    [MCSoundBoard stopAudioForKey:@"quick_tick"];
 }
 
 -(void)startTicking {
@@ -289,9 +289,13 @@ typedef enum {
     BOOL needPlayTickSound = NO;
     _tickCount += _tickInterval;
     if (_viewCircularTimer.progress > 0.75f) {
-        if (_tickCount > 0.35) {
-            _tickCount = 0;
-            needPlayTickSound = YES;
+//        if (_tickCount > 0.35) {
+//            _tickCount = 0;
+//            needPlayTickSound = YES;
+//        }
+        if (!_isPlayingQuickTick) {
+            _isPlayingQuickTick = YES;
+            [MCSoundBoard playAudioForKey:@"quick_tick"];
         }
         
     } else if (_viewCircularTimer.progress > 0.5f) {

@@ -51,7 +51,7 @@
     [MCSoundBoard addSoundAtPath:[[NSBundle mainBundle] pathForResource:@"opener.wav" ofType:nil] forKey:@"opener"];
     
     [MCSoundBoard addAudioAtPath:[[NSBundle mainBundle] pathForResource:@"tick.mp3" ofType:nil] forKey:@"tick"];
-    [MCSoundBoard addAudioAtPath:[[NSBundle mainBundle] pathForResource:@"quick_tick.mp3" ofType:nil] forKey:@"quick_tick"];
+    [MCSoundBoard addAudioAtPath:[[NSBundle mainBundle] pathForResource:@"fast_tick.mp3" ofType:nil] forKey:@"quick_tick"];
     [MCSoundBoard addAudioAtPath:[[NSBundle mainBundle] pathForResource:@"alarm.mp3" ofType:nil] forKey:@"alarm"];
     [MCSoundBoard addAudioAtPath:[[NSBundle mainBundle] pathForResource:@"switch.mp3" ofType:nil] forKey:@"switch"];
     

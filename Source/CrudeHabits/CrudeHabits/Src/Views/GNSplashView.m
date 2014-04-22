@@ -44,8 +44,8 @@
         
         //_lblH.frame = CGRectMake(140, 80, 160, 180);
 
-        [_lblH alignCenterXWithView:self predicate:@"40"];
-        [_lblH alignCenterYWithView:_lblC predicate:@"-22"];
+        [_lblH alignCenterXWithView:self predicate:@"43"];
+        [_lblH alignCenterYWithView:_lblC predicate:@"-16"];
         
         
         
