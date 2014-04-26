@@ -10,6 +10,13 @@
 
 @interface GNSuggestionVC () {
     UIButton        *_btnClose;
+    UILabel         *_lblTitle;
+    UILabel         *_lblChooseACategory;
+    UITableView     *_tvCategories;
+    UITextField     *_tfNewCategory;
+    UILabel         *_lblSuggestAWord;
+    UITextField     *_tfNewWord;
+    UIButton        *_btnSubmit;
 }
 
 @end
