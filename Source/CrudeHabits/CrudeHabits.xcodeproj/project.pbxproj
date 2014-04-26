@@ -16,6 +16,8 @@
 		EA1812DC190645E4000B3B11 /* fast_tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA1812DB190645E4000B3B11 /* fast_tick.mp3 */; };
 		EA1812DE1906497D000B3B11 /* close_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1812DD1906497D000B3B11 /* close_white@2x.png */; };
 		EA27B1011902270B0086DC70 /* GNSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA27B1001902270B0086DC70 /* GNSplashView.m */; };
+		EA33980C190B91E100B57EA3 /* setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA33980B190B91E100B57EA3 /* setting@2x.png */; };
+		EA33980F190B93A600B57EA3 /* GNSuggestionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA33980E190B93A600B57EA3 /* GNSuggestionVC.m */; };
 		EA3B00DC1901F5D400C63D9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B00DB1901F5D400C63D9D /* Foundation.framework */; };
 		EA3B00DE1901F5D400C63D9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B00DD1901F5D400C63D9D /* CoreGraphics.framework */; };
 		EA3B00E01901F5D400C63D9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B00DF1901F5D400C63D9D /* UIKit.framework */; };
@@ -85,6 +87,9 @@
 		EA1812DD1906497D000B3B11 /* close_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_white@2x.png"; sourceTree = "<group>"; };
 		EA27B0FF1902270B0086DC70 /* GNSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNSplashView.h; sourceTree = "<group>"; };
 		EA27B1001902270B0086DC70 /* GNSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNSplashView.m; sourceTree = "<group>"; };
+		EA33980B190B91E100B57EA3 /* setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@2x.png"; sourceTree = "<group>"; };
+		EA33980D190B93A600B57EA3 /* GNSuggestionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNSuggestionVC.h; sourceTree = "<group>"; };
+		EA33980E190B93A600B57EA3 /* GNSuggestionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNSuggestionVC.m; sourceTree = "<group>"; };
 		EA3B00D81901F5D400C63D9D /* CrudeHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrudeHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3B00DB1901F5D400C63D9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA3B00DD1901F5D400C63D9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -176,6 +181,7 @@
 		EA3B00CF1901F5D400C63D9D = {
 			isa = PBXGroup;
 			children = (
+				EA33980B190B91E100B57EA3 /* setting@2x.png */,
 				EA1812DD1906497D000B3B11 /* close_white@2x.png */,
 				EA1812DB190645E4000B3B11 /* fast_tick.mp3 */,
 				EA0F52CE1906094600074AF9 /* quick_tick.mp3 */,
@@ -236,6 +242,8 @@
 				EA13E8831902569B004F19D4 /* GNStartGameVC.m */,
 				EA13E88519025B7A004F19D4 /* GNGameVC.h */,
 				EA13E88619025B7A004F19D4 /* GNGameVC.m */,
+				EA33980D190B93A600B57EA3 /* GNSuggestionVC.h */,
+				EA33980E190B93A600B57EA3 /* GNSuggestionVC.m */,
 			);
 			path = CrudeHabits;
 			sourceTree = "<group>";
@@ -430,6 +438,7 @@
 				EA3B038119037570009F9500 /* Icon-Small@2x.png in Resources */,
 				EA3B037C19037570009F9500 /* Icon-40.png in Resources */,
 				EA3B037919037570009F9500 /* Dragon-icon 152.png in Resources */,
+				EA33980C190B91E100B57EA3 /* setting@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +496,7 @@
 				EA3B00F21901F5D400C63D9D /* GNBaseVC.m in Sources */,
 				EA5386B81901F75200860802 /* FDDefine.m in Sources */,
 				EA13E8841902569B004F19D4 /* GNStartGameVC.m in Sources */,
+				EA33980F190B93A600B57EA3 /* GNSuggestionVC.m in Sources */,
 				EA13E8811902514E004F19D4 /* GNHelpVC.m in Sources */,
 				EA27B1011902270B0086DC70 /* GNSplashView.m in Sources */,
 				EA13E87E190250DE004F19D4 /* GNSplashVC.m in Sources */,

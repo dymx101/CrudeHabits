@@ -75,6 +75,7 @@
         [_btnHowItWorks constrainWidth:@"200" height:@"45"];
         [_btnHowItWorks alignCenterXWithView:self predicate:@"0"];
         [_btnHowItWorks constrainTopSpaceToView:_btnPlay predicate:@"20"];
+        
     }
     return self;
 }

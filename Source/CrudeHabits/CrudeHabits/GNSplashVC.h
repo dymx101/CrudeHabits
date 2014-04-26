@@ -9,5 +9,5 @@
 #import "GNBaseVC.h"
 
 @interface GNSplashVC : GNBaseVC
-
+@property (nonatomic, strong)     UIButton    *btnSetting;
 @end
