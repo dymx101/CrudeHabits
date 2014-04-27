@@ -30,7 +30,7 @@
 {
     [super viewDidLoad];
     
-    _categories = @[@"College", @"Urban", @"Business"];
+    _categories = [[GNData sharedInstance] categories];
     
     _lblCategoryChooseTitle = [UILabel new];
     _lblCategoryChooseTitle.font = [UIFont fontWithName:FONT_REGULAR size:25];
@@ -115,7 +115,7 @@
 
 -(void)cycleCategoryIndex {
     
-    int count = _categories.count;
+    NSUInteger count = _categories.count;
     if (count <= 0) {
         return;
     }

@@ -38,13 +38,13 @@
     return self;
 }
 
-- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
-
-    [super setHighlighted:highlighted animated:animated];
-    
-    _lblTitle.textColor = highlighted ? [FDColor sharedInstance].themeRed : [UIColor whiteColor];
-    _viewBg.backgroundColor = highlighted ? [UIColor colorWithWhite:1 alpha:.8] : [UIColor clearColor];
-}
+//- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+//
+//    [super setHighlighted:highlighted animated:animated];
+//    
+//    _lblTitle.textColor = highlighted ? [FDColor sharedInstance].themeRed : [UIColor whiteColor];
+//    _viewBg.backgroundColor = highlighted ? [UIColor colorWithWhite:1 alpha:.8] : [UIColor clearColor];
+//}
 
 
 -(void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -52,7 +52,7 @@
     [super setSelected:selected animated:animated];
     
     _lblTitle.textColor = selected ? [FDColor sharedInstance].themeRed : [UIColor whiteColor];
-    _viewBg.backgroundColor = selected ? [FDColor sharedInstance].white : [UIColor clearColor];
+    _viewBg.backgroundColor = selected ? [UIColor colorWithWhite:1 alpha:.8] : [UIColor clearColor];
 }
 
 +(CGFloat)cellHeight {

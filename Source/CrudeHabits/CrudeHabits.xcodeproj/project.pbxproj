@@ -17,6 +17,8 @@
 		EA1812DE1906497D000B3B11 /* close_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1812DD1906497D000B3B11 /* close_white@2x.png */; };
 		EA27B1011902270B0086DC70 /* GNSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA27B1001902270B0086DC70 /* GNSplashView.m */; };
 		EA28D5D2190C7EF7005C7966 /* GNCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA28D5D1190C7EF7005C7966 /* GNCategoryCell.m */; };
+		EA28D5D5190CAF32005C7966 /* GNData.m in Sources */ = {isa = PBXBuildFile; fileRef = EA28D5D4190CAF32005C7966 /* GNData.m */; };
+		EA28D5D7190CB1A7005C7966 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA28D5D6190CB1A7005C7966 /* MessageUI.framework */; };
 		EA33980C190B91E100B57EA3 /* setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA33980B190B91E100B57EA3 /* setting@2x.png */; };
 		EA33980F190B93A600B57EA3 /* GNSuggestionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA33980E190B93A600B57EA3 /* GNSuggestionVC.m */; };
 		EA3B00DC1901F5D400C63D9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B00DB1901F5D400C63D9D /* Foundation.framework */; };
@@ -90,6 +92,9 @@
 		EA27B1001902270B0086DC70 /* GNSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNSplashView.m; sourceTree = "<group>"; };
 		EA28D5D0190C7EF7005C7966 /* GNCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNCategoryCell.h; sourceTree = "<group>"; };
 		EA28D5D1190C7EF7005C7966 /* GNCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNCategoryCell.m; sourceTree = "<group>"; };
+		EA28D5D3190CAF32005C7966 /* GNData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNData.h; sourceTree = "<group>"; };
+		EA28D5D4190CAF32005C7966 /* GNData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNData.m; sourceTree = "<group>"; };
+		EA28D5D6190CB1A7005C7966 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		EA33980B190B91E100B57EA3 /* setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@2x.png"; sourceTree = "<group>"; };
 		EA33980D190B93A600B57EA3 /* GNSuggestionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNSuggestionVC.h; sourceTree = "<group>"; };
 		EA33980E190B93A600B57EA3 /* GNSuggestionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNSuggestionVC.m; sourceTree = "<group>"; };
@@ -150,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA28D5D7190CB1A7005C7966 /* MessageUI.framework in Frameworks */,
 				EA3B00DE1901F5D400C63D9D /* CoreGraphics.framework in Frameworks */,
 				EA3B00E01901F5D400C63D9D /* UIKit.framework in Frameworks */,
 				EA3B00DC1901F5D400C63D9D /* Foundation.framework in Frameworks */,
@@ -218,6 +224,7 @@
 		EA3B00DA1901F5D400C63D9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA28D5D6190CB1A7005C7966 /* MessageUI.framework */,
 				EA3B00DB1901F5D400C63D9D /* Foundation.framework */,
 				EA3B00DD1901F5D400C63D9D /* CoreGraphics.framework */,
 				EA3B00DF1901F5D400C63D9D /* UIKit.framework */,
@@ -249,6 +256,8 @@
 				EA33980E190B93A600B57EA3 /* GNSuggestionVC.m */,
 				EA28D5D0190C7EF7005C7966 /* GNCategoryCell.h */,
 				EA28D5D1190C7EF7005C7966 /* GNCategoryCell.m */,
+				EA28D5D3190CAF32005C7966 /* GNData.h */,
+				EA28D5D4190CAF32005C7966 /* GNData.m */,
 			);
 			path = CrudeHabits;
 			sourceTree = "<group>";
@@ -498,6 +507,7 @@
 				EA3B00E81901F5D400C63D9D /* main.m in Sources */,
 				EA7B977B19027E0600975117 /* GNVertProgressView.m in Sources */,
 				EA5386B51901F72C00860802 /* FDColor.m in Sources */,
+				EA28D5D5190CAF32005C7966 /* GNData.m in Sources */,
 				EA3B00F21901F5D400C63D9D /* GNBaseVC.m in Sources */,
 				EA5386B81901F75200860802 /* FDDefine.m in Sources */,
 				EA13E8841902569B004F19D4 /* GNStartGameVC.m in Sources */,

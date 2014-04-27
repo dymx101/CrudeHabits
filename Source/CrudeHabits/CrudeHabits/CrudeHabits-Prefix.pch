@@ -26,5 +26,6 @@
 #import "FDDefine.h" 
 #import "FDColor.h"
 #import "MCSoundBoard.h"
+#import "GNData.h"
 
 #endif

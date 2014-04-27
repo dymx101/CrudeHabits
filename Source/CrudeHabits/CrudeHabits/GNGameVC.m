@@ -126,7 +126,7 @@ typedef enum {
     _timeCountMax = 50.f;
     _tickInterval = 0.1f;
     
-    _words = @[@"Twerking", @"Moonwalk", @"LOL", @"Bookworm", @"Snicker"];
+    _words = [[GNData sharedInstance] words];
     
     
     _lblWord = [UILabel new];

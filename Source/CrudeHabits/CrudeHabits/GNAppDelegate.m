@@ -55,6 +55,9 @@
     [MCSoundBoard addAudioAtPath:[[NSBundle mainBundle] pathForResource:@"alarm.mp3" ofType:nil] forKey:@"alarm"];
     [MCSoundBoard addAudioAtPath:[[NSBundle mainBundle] pathForResource:@"switch.mp3" ofType:nil] forKey:@"switch"];
     
+    [[UITextField appearance] setTintColor:[FDColor sharedInstance].themeRed];
+    [[UITextView appearance] setTintColor:[FDColor sharedInstance].themeRed];
+    
     return YES;
 }
 							
