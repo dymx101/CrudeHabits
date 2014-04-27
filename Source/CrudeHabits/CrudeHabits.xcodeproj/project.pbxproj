@@ -16,6 +16,7 @@
 		EA1812DC190645E4000B3B11 /* fast_tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA1812DB190645E4000B3B11 /* fast_tick.mp3 */; };
 		EA1812DE1906497D000B3B11 /* close_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1812DD1906497D000B3B11 /* close_white@2x.png */; };
 		EA27B1011902270B0086DC70 /* GNSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA27B1001902270B0086DC70 /* GNSplashView.m */; };
+		EA28D5D2190C7EF7005C7966 /* GNCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA28D5D1190C7EF7005C7966 /* GNCategoryCell.m */; };
 		EA33980C190B91E100B57EA3 /* setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA33980B190B91E100B57EA3 /* setting@2x.png */; };
 		EA33980F190B93A600B57EA3 /* GNSuggestionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA33980E190B93A600B57EA3 /* GNSuggestionVC.m */; };
 		EA3B00DC1901F5D400C63D9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B00DB1901F5D400C63D9D /* Foundation.framework */; };
@@ -87,6 +88,8 @@
 		EA1812DD1906497D000B3B11 /* close_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_white@2x.png"; sourceTree = "<group>"; };
 		EA27B0FF1902270B0086DC70 /* GNSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNSplashView.h; sourceTree = "<group>"; };
 		EA27B1001902270B0086DC70 /* GNSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNSplashView.m; sourceTree = "<group>"; };
+		EA28D5D0190C7EF7005C7966 /* GNCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNCategoryCell.h; sourceTree = "<group>"; };
+		EA28D5D1190C7EF7005C7966 /* GNCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNCategoryCell.m; sourceTree = "<group>"; };
 		EA33980B190B91E100B57EA3 /* setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@2x.png"; sourceTree = "<group>"; };
 		EA33980D190B93A600B57EA3 /* GNSuggestionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNSuggestionVC.h; sourceTree = "<group>"; };
 		EA33980E190B93A600B57EA3 /* GNSuggestionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNSuggestionVC.m; sourceTree = "<group>"; };
@@ -244,6 +247,8 @@
 				EA13E88619025B7A004F19D4 /* GNGameVC.m */,
 				EA33980D190B93A600B57EA3 /* GNSuggestionVC.h */,
 				EA33980E190B93A600B57EA3 /* GNSuggestionVC.m */,
+				EA28D5D0190C7EF7005C7966 /* GNCategoryCell.h */,
+				EA28D5D1190C7EF7005C7966 /* GNCategoryCell.m */,
 			);
 			path = CrudeHabits;
 			sourceTree = "<group>";
@@ -502,6 +507,7 @@
 				EA13E87E190250DE004F19D4 /* GNSplashVC.m in Sources */,
 				EA3B00EC1901F5D400C63D9D /* GNAppDelegate.m in Sources */,
 				EA3B038F190381A9009F9500 /* MCSoundBoard.m in Sources */,
+				EA28D5D2190C7EF7005C7966 /* GNCategoryCell.m in Sources */,
 				EA13E88719025B7A004F19D4 /* GNGameVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,7 +633,7 @@
 			baseConfigurationReference = 4C3489E583DE4777BF135656 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrudeHabits/CrudeHabits-Prefix.pch";
@@ -643,7 +649,7 @@
 			baseConfigurationReference = 4C3489E583DE4777BF135656 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrudeHabits/CrudeHabits-Prefix.pch";
