@@ -211,9 +211,8 @@
     
         BOOL isCustomCategory = _tfNewCategory.text.length > 0;
         NSString *category = isCustomCategory ? _tfNewCategory.text : _categories[_selectedIndex];
-        NSString *contentBody = [NSString stringWithFormat:@"Suggested Categories: '%@', %@.\n\nSuggested word: '%@'."
+        NSString *contentBody = [NSString stringWithFormat:@"Suggested Categories: '%@'.\n\nSuggested word: '%@'."
                                  , category
-                                 , isCustomCategory ? @"is a new category" : @"is an exsisting category"
                                  , _tfNewWord.text];
 
 
