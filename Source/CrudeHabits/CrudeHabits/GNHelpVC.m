@@ -10,7 +10,7 @@
 #import "GNSelectCategoryVC.h"
 
 @interface GNHelpVC () {
-    UILabel     *_lblDescription;
+    UITextView     *_txtvDescription;
 }
 @property (nonatomic, strong)     UIButton    *btnPlay;
 @property (nonatomic, strong)     UIButton    *btnBack;
@@ -23,15 +23,19 @@
 {
     [super viewDidLoad];
     
-    _lblDescription = [UILabel new];
-    _lblDescription.font = [UIFont fontWithName:FONT_REGULAR size:15];
-    _lblDescription.textColor = [UIColor whiteColor];
-    _lblDescription.numberOfLines = 0;
-    _lblDescription.textAlignment = NSTextAlignmentCenter;
-    _lblDescription.text = @"Have your team sit every other person and get them to say the words you see on the screen - describe it however you want.Describe or act out the word, just don't say the word itself.";
-    [self.view addSubview:_lblDescription];
-    [_lblDescription alignLeading:@"5" trailing:@"-5" toView:self.view];
-    [_lblDescription alignTopEdgeWithView:self.view predicate:@"140"];
+    self.lblTitle.text = @"How to play";
+    
+    _txtvDescription = [UITextView new];
+    _txtvDescription.font = [UIFont fontWithName:FONT_REGULAR size:15];
+    _txtvDescription.textColor = [UIColor whiteColor];
+    _txtvDescription.backgroundColor = [UIColor clearColor];
+    _txtvDescription.editable = NO;
+    _txtvDescription.text = @"1. Divide evenly into two teams and sit in a circle with youteammates sitting every other person.\n\n2. Tap the start button and select your category.\n\n3. After you tap the Play button you'll see a few crude wordsdisplayed on your screen. Describe your words so you can get your team to saythem out loud. You cannot say any part of the words or shout out their firstletters, but you can use verbal clues or physical gestures to explain yourself.If a team breaks the rules then the opposing team is awarded the point for thatround.\n\n4. The team that gets stuck with the phone when the round endslosses. The team that is not holding the phone is awarded one point.\n\n5. The first team to seven points is the Crude Habits winner!Celebrate accordingly.";
+    
+    [self.view addSubview:_txtvDescription];
+    [_txtvDescription alignLeading:@"5" trailing:@"-5" toView:self.view];
+    [_txtvDescription alignTopEdgeWithView:self.view predicate:@"70"];
+    [_txtvDescription constrainHeight:@"280"];
     
     
     //////
@@ -45,7 +49,7 @@
     
     [_btnPlay constrainWidth:@"200" height:@"45"];
     [_btnPlay alignCenterXWithView:self.view predicate:@"0"];
-    [_btnPlay constrainTopSpaceToView:_lblDescription predicate:@"50"];
+    [_btnPlay constrainTopSpaceToView:_txtvDescription predicate:@"20"];
     
     
     //////
