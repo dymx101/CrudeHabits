@@ -119,7 +119,7 @@
 
 -(void)cycleCategoryIndex {
     
-    NSUInteger count = _categories.count;
+    NSInteger count = _categories.count;
     if (count <= 0) {
         return;
     }

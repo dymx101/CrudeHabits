@@ -211,7 +211,6 @@ typedef enum {
     
     [_btnNext constrainWidth:@"200" height:@"45"];
     [_btnNext alignCenterXWithView:self.view predicate:@"0"];
-    [_btnNext constrainTopSpaceToView:_lblWord predicate:@"140"];
     
     
     //////
@@ -286,6 +285,7 @@ typedef enum {
     [_viewTeam1Progress alignLeadingEdgeWithView:self.view predicate:@"20"];
     [_viewTeam1Progress alignBottomEdgeWithView:self.view predicate:@"-80"];
     [_viewTeam1ProgressBG alignTop:@"0" leading:@"-20" bottom:@"40" trailing:@"20" toView:_viewTeam1Progress];
+    [_btnNext alignTopEdgeWithView:_viewTeam1ProgressBG predicate:@"140"];
     
     _viewTeam2ProgressBG = [UIView new];
     [self.view addSubview:_viewTeam2ProgressBG];
