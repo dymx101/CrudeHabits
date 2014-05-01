@@ -53,6 +53,8 @@ typedef enum {
     
     NSArray                     *_words;
     GNWord                      *_word;
+    
+    long long                   _categoryID;
 }
 
 @property (nonatomic, strong)     UIButton    *btnNext;
@@ -67,6 +69,14 @@ typedef enum {
 @end
 
 @implementation GNGameVC
+
++(instancetype)newWithCategoryID:(long long)aCategoryID {
+    GNGameVC *me = [GNGameVC new];
+    
+    me->_categoryID = aCategoryID;
+    
+    return me;
+}
 
 - (void)installPauseView
 {
@@ -126,7 +136,7 @@ typedef enum {
     _timeCountMax = 50.f;
     _tickInterval = 0.1f;
     
-    _words = [[GNData sharedInstance] words];
+    _words = [[GNData sharedInstance] wordsWithCategoryID:_categoryID];
     
     
     _lblWord = [UILabel new];

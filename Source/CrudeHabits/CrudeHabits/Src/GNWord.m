@@ -16,4 +16,8 @@
     self.categoryID = [[aDic objectForKey:@"catid"] longLongValue];
 }
 
+-(NSString *)description {
+    return [NSString stringWithFormat:@"word - [catid: %lld, name: %@]", self.categoryID, self.name];
+}
+
 @end

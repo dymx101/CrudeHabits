@@ -9,5 +9,5 @@
 #import "GNBaseVC.h"
 
 @interface GNGameVC : GNBaseVC
-
++(instancetype)newWithCategoryID:(long long)aCategoryID;
 @end

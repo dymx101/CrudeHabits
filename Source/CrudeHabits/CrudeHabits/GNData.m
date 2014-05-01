@@ -49,4 +49,20 @@ DEF_SINGLETON(GNData)
     }
 }
 
+-(NSArray *)wordsWithCategoryID:(long long)aCategoryID {
+    
+    if (aCategoryID == kCategoryCurveBall) {
+        return _words;
+    }
+    
+    NSMutableArray *words = [NSMutableArray array];
+    for (GNWord *word in _words) {
+        if (word.categoryID == aCategoryID) {
+            [words addObject:word];
+        }
+    }
+    
+    return words;
+}
+
 @end

@@ -98,7 +98,8 @@
 
 #pragma mark - actions
 -(void)startAction:(id)sender {
-    GNGameVC *vc = [GNGameVC new];
+    GNCategory *category = _categories[_categoryIndex];
+    GNGameVC *vc = [GNGameVC newWithCategoryID:category.ID];
     vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:vc animated:YES completion:nil];
 }
