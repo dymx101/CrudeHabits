@@ -156,7 +156,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     GNCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:STR_CELL_ID forIndexPath:indexPath];
     
-    NSString *cateStr = _categories[indexPath.row];
+    GNCategory *cate = _categories[indexPath.row];
+    NSString *cateStr = cate.name;
     cell.lblTitle.text = cateStr;
     
     return cell;
@@ -207,10 +208,11 @@
         MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
         controller.mailComposeDelegate = self;
         [controller setSubject:@"Suggestions"];
-        [controller setToRecipients:@[@"samlangon1@gmail.com"]];
+        [controller setToRecipients:@[@"team@crudehabits.com"]];
     
         BOOL isCustomCategory = _tfNewCategory.text.length > 0;
-        NSString *category = isCustomCategory ? _tfNewCategory.text : _categories[_selectedIndex];
+        GNCategory *cate = _categories[_selectedIndex];
+        NSString *category = isCustomCategory ? _tfNewCategory.text : cate.name;
         NSString *contentBody = [NSString stringWithFormat:@"Suggested Categories: '%@'.\n\nSuggested word: '%@'."
                                  , category
                                  , _tfNewWord.text];
