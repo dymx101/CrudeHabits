@@ -28,4 +28,7 @@
 #import "MCSoundBoard.h"
 #import "GNData.h"
 
+#import "GNWord.h"
+#import "GNCategory.h"
+
 #endif

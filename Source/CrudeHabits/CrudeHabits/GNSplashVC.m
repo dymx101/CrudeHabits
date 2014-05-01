@@ -9,7 +9,7 @@
 #import "GNSplashVC.h"
 #import "GNSplashView.h"
 #import "GNHelpVC.h"
-#import "GNStartGameVC.h"
+#import "GNSelectCategoryVC.h"
 #import "GNSuggestionVC.h"
 
 @interface GNSplashVC () {
@@ -51,7 +51,7 @@
 }
 
 -(void)playAction:(id)sender {
-    GNStartGameVC *vc = [GNStartGameVC new];
+    GNSelectCategoryVC *vc = [GNSelectCategoryVC new];
     vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:vc animated:YES completion:nil];
 }

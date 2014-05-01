@@ -11,7 +11,7 @@
 @interface GNData : NSObject
 AS_SINGLETON(GNData)
 
--(NSArray *)words;
--(NSArray *)categories;
+@property (nonatomic, strong) NSMutableArray *words;
+@property (nonatomic, strong) NSMutableArray *categories;
 
 @end

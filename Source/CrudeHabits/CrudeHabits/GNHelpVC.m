@@ -7,7 +7,7 @@
 //
 
 #import "GNHelpVC.h"
-#import "GNStartGameVC.h"
+#import "GNSelectCategoryVC.h"
 
 @interface GNHelpVC () {
     UILabel     *_lblDescription;
@@ -78,7 +78,7 @@
 -(void)playAction:(id)sender {
     UIViewController *presentingVC = self.presentingViewController;
     [self dismissViewControllerAnimated:NO completion:^{
-        GNStartGameVC *vc = [GNStartGameVC new];
+        GNSelectCategoryVC *vc = [GNSelectCategoryVC new];
         //vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         [presentingVC presentViewController:vc animated:NO completion:nil];
     }];

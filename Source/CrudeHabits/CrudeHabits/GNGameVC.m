@@ -52,7 +52,7 @@ typedef enum {
     BOOL                        _isGamePaused;
     
     NSArray                     *_words;
-    NSString                    *_word;
+    GNWord                      *_word;
 }
 
 @property (nonatomic, strong)     UIButton    *btnNext;
@@ -398,14 +398,14 @@ typedef enum {
 
 
 -(void)changeWord {
-    NSString *oldWord = _word;
+    GNWord *oldWord = _word;
     
-    while (_word.length <= 0 || [oldWord isEqualToString:_word]) {
+    while (_word == nil || [oldWord.name isEqualToString:_word.name]) {
         int rand = arc4random_uniform((u_int32_t)_words.count);
         _word = _words[rand];
     }
     
-    _lblWord.text = _word;
+    _lblWord.text = _word.name;
 }
 
 -(void)showPlaying {

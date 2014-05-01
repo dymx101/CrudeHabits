@@ -14,7 +14,7 @@
 		EA109EC51911DB04007BC1B8 /* whatever in Resources */ = {isa = PBXBuildFile; fileRef = EA109EC41911DB04007BC1B8 /* whatever */; };
 		EA13E87E190250DE004F19D4 /* GNSplashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13E87D190250DD004F19D4 /* GNSplashVC.m */; };
 		EA13E8811902514E004F19D4 /* GNHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13E8801902514E004F19D4 /* GNHelpVC.m */; };
-		EA13E8841902569B004F19D4 /* GNStartGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13E8831902569B004F19D4 /* GNStartGameVC.m */; };
+		EA13E8841902569B004F19D4 /* GNSelectCategoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13E8831902569B004F19D4 /* GNSelectCategoryVC.m */; };
 		EA13E88719025B7A004F19D4 /* GNGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13E88619025B7A004F19D4 /* GNGameVC.m */; };
 		EA1812DC190645E4000B3B11 /* fast_tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA1812DB190645E4000B3B11 /* fast_tick.mp3 */; };
 		EA1812DE1906497D000B3B11 /* close_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1812DD1906497D000B3B11 /* close_white@2x.png */; };
@@ -65,6 +65,9 @@
 		EA7664AB190505E800EB280C /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA7664AA190505E800EB280C /* alarm.mp3 */; };
 		EA7664AD1905072900EB280C /* switch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA7664AC1905072900EB280C /* switch.mp3 */; };
 		EA7B977B19027E0600975117 /* GNVertProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B977A19027E0600975117 /* GNVertProgressView.m */; };
+		EADD144619124835006F8498 /* GNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EADD144519124835006F8498 /* GNModel.m */; };
+		EADD144919124886006F8498 /* GNCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EADD144819124886006F8498 /* GNCategory.m */; };
+		EADD144C191248AE006F8498 /* GNWord.m in Sources */ = {isa = PBXBuildFile; fileRef = EADD144B191248AE006F8498 /* GNWord.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +91,8 @@
 		EA13E87D190250DD004F19D4 /* GNSplashVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNSplashVC.m; sourceTree = "<group>"; };
 		EA13E87F1902514E004F19D4 /* GNHelpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNHelpVC.h; sourceTree = "<group>"; };
 		EA13E8801902514E004F19D4 /* GNHelpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNHelpVC.m; sourceTree = "<group>"; };
-		EA13E8821902569B004F19D4 /* GNStartGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNStartGameVC.h; sourceTree = "<group>"; };
-		EA13E8831902569B004F19D4 /* GNStartGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNStartGameVC.m; sourceTree = "<group>"; };
+		EA13E8821902569B004F19D4 /* GNSelectCategoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNSelectCategoryVC.h; sourceTree = "<group>"; };
+		EA13E8831902569B004F19D4 /* GNSelectCategoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNSelectCategoryVC.m; sourceTree = "<group>"; };
 		EA13E88519025B7A004F19D4 /* GNGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNGameVC.h; sourceTree = "<group>"; };
 		EA13E88619025B7A004F19D4 /* GNGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNGameVC.m; sourceTree = "<group>"; };
 		EA1812DB190645E4000B3B11 /* fast_tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fast_tick.mp3; sourceTree = "<group>"; };
@@ -154,6 +157,12 @@
 		EA7664AC1905072900EB280C /* switch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = switch.mp3; sourceTree = "<group>"; };
 		EA7B977919027E0600975117 /* GNVertProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNVertProgressView.h; sourceTree = "<group>"; };
 		EA7B977A19027E0600975117 /* GNVertProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNVertProgressView.m; sourceTree = "<group>"; };
+		EADD144419124835006F8498 /* GNModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNModel.h; sourceTree = "<group>"; };
+		EADD144519124835006F8498 /* GNModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNModel.m; sourceTree = "<group>"; };
+		EADD144719124886006F8498 /* GNCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GNCategory.h; path = CrudeHabits/Src/GNCategory.h; sourceTree = SOURCE_ROOT; };
+		EADD144819124886006F8498 /* GNCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GNCategory.m; path = CrudeHabits/Src/GNCategory.m; sourceTree = SOURCE_ROOT; };
+		EADD144A191248AE006F8498 /* GNWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNWord.h; sourceTree = "<group>"; };
+		EADD144B191248AE006F8498 /* GNWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNWord.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,8 +274,8 @@
 				EA13E87D190250DD004F19D4 /* GNSplashVC.m */,
 				EA13E87F1902514E004F19D4 /* GNHelpVC.h */,
 				EA13E8801902514E004F19D4 /* GNHelpVC.m */,
-				EA13E8821902569B004F19D4 /* GNStartGameVC.h */,
-				EA13E8831902569B004F19D4 /* GNStartGameVC.m */,
+				EA13E8821902569B004F19D4 /* GNSelectCategoryVC.h */,
+				EA13E8831902569B004F19D4 /* GNSelectCategoryVC.m */,
 				EA13E88519025B7A004F19D4 /* GNGameVC.h */,
 				EA13E88619025B7A004F19D4 /* GNGameVC.m */,
 				EA33980D190B93A600B57EA3 /* GNSuggestionVC.h */,
@@ -345,6 +354,12 @@
 				EA3B036619036D4C009F9500 /* pause@2x.png */,
 				EA27B0FE190226D90086DC70 /* Views */,
 				EA5386B21901F71A00860802 /* Utils */,
+				EADD144419124835006F8498 /* GNModel.h */,
+				EADD144519124835006F8498 /* GNModel.m */,
+				EADD144719124886006F8498 /* GNCategory.h */,
+				EADD144819124886006F8498 /* GNCategory.m */,
+				EADD144A191248AE006F8498 /* GNWord.h */,
+				EADD144B191248AE006F8498 /* GNWord.m */,
 			);
 			name = Src;
 			path = CrudeHabits/Src;
@@ -528,12 +543,15 @@
 				EA7B977B19027E0600975117 /* GNVertProgressView.m in Sources */,
 				EA5386B51901F72C00860802 /* FDColor.m in Sources */,
 				EA28D5D5190CAF32005C7966 /* GNData.m in Sources */,
+				EADD144919124886006F8498 /* GNCategory.m in Sources */,
 				EA3B00F21901F5D400C63D9D /* GNBaseVC.m in Sources */,
 				EA5386B81901F75200860802 /* FDDefine.m in Sources */,
-				EA13E8841902569B004F19D4 /* GNStartGameVC.m in Sources */,
+				EA13E8841902569B004F19D4 /* GNSelectCategoryVC.m in Sources */,
 				EA33980F190B93A600B57EA3 /* GNSuggestionVC.m in Sources */,
 				EA13E8811902514E004F19D4 /* GNHelpVC.m in Sources */,
+				EADD144C191248AE006F8498 /* GNWord.m in Sources */,
 				EA27B1011902270B0086DC70 /* GNSplashView.m in Sources */,
+				EADD144619124835006F8498 /* GNModel.m in Sources */,
 				EA13E87E190250DE004F19D4 /* GNSplashVC.m in Sources */,
 				EA3B00EC1901F5D400C63D9D /* GNAppDelegate.m in Sources */,
 				EA3B038F190381A9009F9500 /* MCSoundBoard.m in Sources */,

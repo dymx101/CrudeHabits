@@ -11,14 +11,42 @@
 @implementation GNData
 DEF_SINGLETON(GNData)
 
-
--(NSArray *)words {
-    return @[@"Twerking", @"Moonwalk", @"LOL", @"Bookworm", @"Snicker"];
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self readCategories];
+        [self readWords];
+    }
+    return self;
 }
 
+-(void)readCategories {
+    if (_categories == nil) {
+        _categories = [NSMutableArray array];
+    }
+    
+    NSString *catPath = [[NSBundle mainBundle] pathForResource:@"categories" ofType:@"plist"];
+    NSArray *categorieDics = [NSArray arrayWithContentsOfFile:catPath];
+    for (NSDictionary *cateDic in categorieDics) {
 
--(NSArray *)categories {
-    return @[@"College", @"Urban", @"Business"];
+        GNCategory *category = [GNCategory newWithDic:cateDic];
+        [_categories addObject:category];
+    }
+}
+
+-(void)readWords {
+    
+    if (_words == nil) {
+        _words = [NSMutableArray array];
+    }
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"plist"];
+    NSArray *wordDics = [NSArray arrayWithContentsOfFile:path];
+    for (NSDictionary *wordDic in wordDics) {
+        GNWord *word = [GNWord newWithDic:wordDic];
+        [_words addObject:word];
+    }
 }
 
 @end
