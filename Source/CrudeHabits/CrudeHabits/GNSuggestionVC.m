@@ -9,6 +9,7 @@
 #import "GNSuggestionVC.h"
 #import "GNCategoryCell.h"
 #import <MessageUI/MessageUI.h>
+#import "GNCategory.h"
 
 #define STR_CELL_ID     @"STR_CELL_ID"
 
