@@ -51,8 +51,8 @@ typedef enum {
     GameState                   _gameState;
     BOOL                        _isGamePaused;
     
-    NSArray                     *_words;
-    GNWord                      *_word;
+    NSMutableArray                     *_words;
+    GNWord                              *_word;
     
     long long                   _categoryID;
 }
@@ -136,7 +136,7 @@ typedef enum {
     _timeCountMax = 50.f;
     _tickInterval = 0.1f;
     
-    _words = [[GNData sharedInstance] wordsWithCategoryID:_categoryID];
+    [self loadWords];
     
     
     _lblWord = [UILabel new];
@@ -406,8 +406,15 @@ typedef enum {
     }
 }
 
+-(void)loadWords {
+    _words = [[[GNData sharedInstance] wordsWithCategoryID:_categoryID] mutableCopy];
+}
 
 -(void)changeWord {
+    if (_words.count <= 0) {
+        [self loadWords];
+    }
+    
     GNWord *oldWord = _word;
     
     while (_word == nil || [oldWord.name isEqualToString:_word.name]) {
@@ -416,6 +423,9 @@ typedef enum {
     }
     
     _lblWord.text = _word.name;
+    DLog(@"word: %@", _word.name);
+    
+    [_words removeObject:_word];
 }
 
 -(void)showPlaying {
@@ -511,6 +521,8 @@ typedef enum {
     
     [_viewTeam1Progress reset];
     [_viewTeam2Progress reset];
+    _word = nil;
+    [self loadWords];
     
     [self showPlaying];
 }
