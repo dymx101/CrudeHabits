@@ -40,7 +40,21 @@
     
 }
 
+-(void)readCategories {
+    NSString *catPath = [[NSBundle mainBundle] pathForResource:@"categories" ofType:@"plist"];
+    NSArray *categories = [NSArray arrayWithContentsOfFile:catPath];
+    for (NSDictionary *cate in categories) {
+        DLog(@"%@", cate);
+    }
+}
 
+-(void)readWords {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"plist"];
+    NSArray *words = [NSArray arrayWithContentsOfFile:path];
+    for (NSDictionary *word in words) {
+        DLog(@"%@", word);
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -57,6 +71,8 @@
     
     [[UITextField appearance] setTintColor:[FDColor sharedInstance].themeRed];
     [[UITextView appearance] setTintColor:[FDColor sharedInstance].themeRed];
+    
+    [self readWords];
     
     return YES;
 }
