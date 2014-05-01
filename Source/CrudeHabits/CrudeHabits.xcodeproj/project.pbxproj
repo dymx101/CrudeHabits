@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7FC367DF4EA24FA5AB497FBE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ACCF2223FA47668D86F487 /* libPods.a */; };
 		EA0F52CF1906094600074AF9 /* quick_tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA0F52CE1906094600074AF9 /* quick_tick.mp3 */; };
+		EA109EC11911D6E1007BC1B8 /* categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA109EC01911D6E1007BC1B8 /* categories.plist */; };
+		EA109EC31911D893007BC1B8 /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA109EC21911D893007BC1B8 /* words.plist */; };
+		EA109EC51911DB04007BC1B8 /* whatever in Resources */ = {isa = PBXBuildFile; fileRef = EA109EC41911DB04007BC1B8 /* whatever */; };
 		EA13E87E190250DE004F19D4 /* GNSplashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13E87D190250DD004F19D4 /* GNSplashVC.m */; };
 		EA13E8811902514E004F19D4 /* GNHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13E8801902514E004F19D4 /* GNHelpVC.m */; };
 		EA13E8841902569B004F19D4 /* GNStartGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13E8831902569B004F19D4 /* GNStartGameVC.m */; };
@@ -78,6 +81,9 @@
 		42ACCF2223FA47668D86F487 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3489E583DE4777BF135656 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		EA0F52CE1906094600074AF9 /* quick_tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quick_tick.mp3; sourceTree = "<group>"; };
+		EA109EC01911D6E1007BC1B8 /* categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categories.plist; sourceTree = "<group>"; };
+		EA109EC21911D893007BC1B8 /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
+		EA109EC41911DB04007BC1B8 /* whatever */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = whatever; sourceTree = "<group>"; };
 		EA13E87C190250DD004F19D4 /* GNSplashVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNSplashVC.h; sourceTree = "<group>"; };
 		EA13E87D190250DD004F19D4 /* GNSplashVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNSplashVC.m; sourceTree = "<group>"; };
 		EA13E87F1902514E004F19D4 /* GNHelpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNHelpVC.h; sourceTree = "<group>"; };
@@ -176,6 +182,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA109EBF1911D6BC007BC1B8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EA109EC01911D6E1007BC1B8 /* categories.plist */,
+				EA109EC21911D893007BC1B8 /* words.plist */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		EA27B0FE190226D90086DC70 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +205,8 @@
 		EA3B00CF1901F5D400C63D9D = {
 			isa = PBXGroup;
 			children = (
+				EA109EC41911DB04007BC1B8 /* whatever */,
+				EA109EBF1911D6BC007BC1B8 /* Data */,
 				EA33980B190B91E100B57EA3 /* setting@2x.png */,
 				EA1812DD1906497D000B3B11 /* close_white@2x.png */,
 				EA1812DB190645E4000B3B11 /* fast_tick.mp3 */,
@@ -429,6 +446,8 @@
 				EA3B037F19037570009F9500 /* Icon-Small-50.png in Resources */,
 				EA3B037819037570009F9500 /* Dragon-icon 144.png in Resources */,
 				EA1812DE1906497D000B3B11 /* close_white@2x.png in Resources */,
+				EA109EC11911D6E1007BC1B8 /* categories.plist in Resources */,
+				EA109EC51911DB04007BC1B8 /* whatever in Resources */,
 				EA0F52CF1906094600074AF9 /* quick_tick.mp3 in Resources */,
 				EA3B00E61901F5D400C63D9D /* InfoPlist.strings in Resources */,
 				EA3B037719037570009F9500 /* Dragon-icon 120.png in Resources */,
@@ -442,6 +461,7 @@
 				EA3B038019037570009F9500 /* Icon-Small.png in Resources */,
 				EA5A5139190385A000E9C49B /* win.wav in Resources */,
 				EA3B036719036D4C009F9500 /* play@2x.png in Resources */,
+				EA109EC31911D893007BC1B8 /* words.plist in Resources */,
 				EA3B00EF1901F5D400C63D9D /* Main.storyboard in Resources */,
 				EA1812DC190645E4000B3B11 /* fast_tick.mp3 in Resources */,
 				EA7664A91904FF9D00EB280C /* tick.mp3 in Resources */,
