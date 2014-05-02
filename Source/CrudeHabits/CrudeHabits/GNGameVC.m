@@ -196,7 +196,6 @@ typedef enum {
 
     [self.view addSubview:_viewCircularTimer];
     [_viewCircularTimer alignCenterXWithView:self.view predicate:@"0"];
-    [_viewCircularTimer constrainTopSpaceToView:_lblWord predicate:@"20"];
     [_viewCircularTimer constrainWidth:@"70" height:@"70"];
     
     
@@ -286,6 +285,7 @@ typedef enum {
     [_viewTeam1Progress alignBottomEdgeWithView:self.view predicate:@"-80"];
     [_viewTeam1ProgressBG alignTop:@"0" leading:@"-20" bottom:@"40" trailing:@"20" toView:_viewTeam1Progress];
     [_btnNext alignTopEdgeWithView:_viewTeam1ProgressBG predicate:@"140"];
+    [_viewCircularTimer alignTopEdgeWithView:_viewTeam1ProgressBG predicate:@"20"];
     
     _viewTeam2ProgressBG = [UIView new];
     [self.view addSubview:_viewTeam2ProgressBG];

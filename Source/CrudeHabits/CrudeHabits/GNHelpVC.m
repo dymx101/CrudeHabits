@@ -35,7 +35,7 @@
     [self.view addSubview:_txtvDescription];
     [_txtvDescription alignLeading:@"5" trailing:@"-5" toView:self.view];
     [_txtvDescription alignTopEdgeWithView:self.view predicate:@"70"];
-    [_txtvDescription constrainHeight:@"280"];
+    [_txtvDescription alignBottomEdgeWithView:self.view predicate:@"-85"];
     
     
     //////
@@ -60,6 +60,7 @@
     [_btnBack setTitle:@"Back" forState:UIControlStateNormal];
     _btnBack.layer.cornerRadius = 10.f;
     [self.view addSubview:_btnBack];
+    _btnBack.hidden = YES;
     
     [_btnBack constrainWidth:@"200" height:@"45"];
     [_btnBack alignCenterXWithView:self.view predicate:@"0"];
