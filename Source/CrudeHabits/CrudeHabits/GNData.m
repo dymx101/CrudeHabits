@@ -31,7 +31,9 @@ DEF_SINGLETON(GNData)
     for (NSDictionary *cateDic in categorieDics) {
 
         GNCategory *category = [GNCategory newWithDic:cateDic];
-        [_categories addObject:category];
+        if (category.ID != kCategoryTodaysStars) {  // leave out Today's Stars
+            [_categories addObject:category];
+        }
     }
 }
 
@@ -51,14 +53,22 @@ DEF_SINGLETON(GNData)
 
 -(NSArray *)wordsWithCategoryID:(long long)aCategoryID {
     
-    if (aCategoryID == kCategoryCurveBall) {
-        return _words;
-    }
-    
     NSMutableArray *words = [NSMutableArray array];
-    for (GNWord *word in _words) {
-        if (word.categoryID == aCategoryID) {
-            [words addObject:word];
+    
+    if (aCategoryID == kCategoryCurveBall) {
+        
+        for (GNWord *word in _words) {
+            // leave out Today's Stars
+            if (word.categoryID != kCategoryTodaysStars) {
+                [words addObject:word];
+            }
+        }
+        
+    } else {
+        for (GNWord *word in _words) {
+            if (word.categoryID == aCategoryID) {
+                [words addObject:word];
+            }
         }
     }
     

@@ -23,14 +23,23 @@
 {
     [super viewDidLoad];
     
-    self.lblTitle.text = @"How to play";
+    self.lblTitle.text = @"Playing Crude Habits";
     
     _txtvDescription = [UITextView new];
     _txtvDescription.font = [UIFont fontWithName:FONT_REGULAR size:15];
     _txtvDescription.textColor = [UIColor whiteColor];
     _txtvDescription.backgroundColor = [UIColor clearColor];
     _txtvDescription.editable = NO;
-    _txtvDescription.text = @"1. Divide evenly into two teams and sit in a circle with you teammates sitting every other person.\n\n2. Tap the start button and select your category.\n\n3. After you tap the Play button you'll see a few crude words displayed on your screen. Describe your words so you can get your team to say them out loud. You cannot say any part of the words or shout out their first letters, but you can use verbal clues or physical gestures to explain yourself.If a team breaks the rules then the opposing team is awarded the point for that round.\n\n4. The team that gets stuck with the phone when the round ends losses. The team that is not holding the phone is awarded one point.\n\n5. The first team to seven points is the Crude Habits winner!Celebrate accordingly.";
+    
+    _txtvDescription.text = @"1. Divide evenly into two teams and sit in a circle with your teammates sitting every other person.\n\n"
+    
+    "2. Tap the start button and select your category.\n\n"
+    
+    "3. After you tap the Play button you'll see a few crude words displayed on your screen. Describe or act out the words on your screen so that your teammates shout them out. You can't say any part of the words or shout out their first letters, but you can use verbal clues or physical gestures to explain yourself. If a team breaks the rules then the opposing team is awarded the point for that round.\n\n"
+        
+        "4. The team that gets stuck with the phone when the round ends losses. The team that isn't holding the phone is awarded one point.\n\n"
+        
+        "5. The first team to five points is the Crude Habits winner! Celebrate accordingly.\n\n";
     
     [self.view addSubview:_txtvDescription];
     [_txtvDescription alignLeading:@"5" trailing:@"-5" toView:self.view];

@@ -4,12 +4,6 @@
 <array>
 	<dict>
 		<key>id</key>
-		<integer>0</integer>
-		<key>name</key>
-		<string>Curve Ball</string>
-	</dict>
-	<dict>
-		<key>id</key>
 		<integer>1</integer>
 		<key>name</key>
 		<string>Work</string>
@@ -37,6 +31,12 @@
 		<integer>5</integer>
 		<key>name</key>
 		<string>Today&apos;s Stars</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>0</integer>
+		<key>name</key>
+		<string>Curve Ball</string>
 	</dict>
 </array>
 </plist>

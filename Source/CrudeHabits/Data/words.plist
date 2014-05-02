@@ -10,7 +10,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Power Point</string>
+		<string>Powerpoint</string>
 		<key>catid</key>
 		<integer>1</integer>
 	</dict>
@@ -28,13 +28,13 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Dont Ask Dont Tell</string>
+		<string>Dont Ask, Dont Tell</string>
 		<key>catid</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Work From Home</string>
+		<string>Work from home</string>
 		<key>catid</key>
 		<integer>1</integer>
 	</dict>
@@ -82,7 +82,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Christmas party</string>
+		<string>Christmas Party</string>
 		<key>catid</key>
 		<integer>1</integer>
 	</dict>
@@ -112,7 +112,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Cooperate ladder</string>
+		<string>Cooperate Ladder</string>
 		<key>catid</key>
 		<integer>1</integer>
 	</dict>
@@ -136,13 +136,19 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>A Case of The Mondays</string>
+		<string>VC</string>
 		<key>catid</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Quid pro quo</string>
+		<string>Case of the Mondays</string>
+		<key>catid</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Quid Pro Quo</string>
 		<key>catid</key>
 		<integer>1</integer>
 	</dict>
@@ -172,7 +178,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>CEOs and office hoes</string>
+		<string>CEOs and Office Hoes</string>
 		<key>catid</key>
 		<integer>1</integer>
 	</dict>
@@ -190,7 +196,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Office whore</string>
+		<string>Office Whore</string>
 		<key>catid</key>
 		<integer>1</integer>
 	</dict>
@@ -202,7 +208,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Crazy boss</string>
+		<string>Crazy Boss</string>
 		<key>catid</key>
 		<integer>1</integer>
 	</dict>
@@ -214,7 +220,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Suit and tie</string>
+		<string>Suit and Tie</string>
 		<key>catid</key>
 		<integer>1</integer>
 	</dict>
@@ -238,7 +244,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Business slutty</string>
+		<string>Business Slutty</string>
 		<key>catid</key>
 		<integer>1</integer>
 	</dict>
@@ -352,7 +358,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Bathroom sex</string>
+		<string>Bathroom Sex</string>
 		<key>catid</key>
 		<integer>1</integer>
 	</dict>
@@ -388,19 +394,19 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Eating a keyboard</string>
+		<string>Eating a Keyboard</string>
 		<key>catid</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Office slut</string>
+		<string>Office Slut</string>
 		<key>catid</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Shitty salary</string>
+		<string>Shitty Salary</string>
 		<key>catid</key>
 		<integer>1</integer>
 	</dict>
@@ -568,7 +574,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Twin dongs</string>
+		<string>Twin Dongs</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
@@ -622,7 +628,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Whispering eye</string>
+		<string>Whispering Eye</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
@@ -634,7 +640,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Anger boner</string>
+		<string>Anger Boner</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
@@ -664,13 +670,13 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Hormon injections</string>
+		<string>Hormon Injections</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Receding testicles</string>
+		<string>Receding Testicles</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
@@ -682,7 +688,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Full frontal nudity</string>
+		<string>Full Frontal nudity</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
@@ -700,13 +706,13 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Nipple tassels</string>
+		<string>Nipple Tassels</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Teen pregnancy</string>
+		<string>Teen Pregnancy</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
@@ -724,7 +730,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Genital piercings</string>
+		<string>Genital Piercings</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
@@ -742,13 +748,13 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Air hump</string>
+		<string>Air Hump</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Public restrooms</string>
+		<string>Public Restrooms</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
@@ -760,7 +766,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Monkey porn</string>
+		<string>Monkey Porn</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
@@ -778,7 +784,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Holy tits</string>
+		<string>Holy Tits</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
@@ -790,7 +796,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Public sex</string>
+		<string>Public Sex</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
@@ -803,12 +809,6 @@
 	<dict>
 		<key>name</key>
 		<string>Quicky in the bathroom</string>
-		<key>catid</key>
-		<integer>2</integer>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>Three way</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
@@ -844,25 +844,25 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Fucker&apos;s remorse</string>
+		<string>Fucker&apos;s Remorse</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Restless dick syndrome</string>
+		<string>Restless Dick Syndrome</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Dirty mouth</string>
+		<string>Dirty Mouth</string>
 		<key>catid</key>
 		<integer>2</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Suns Out Guns Out</string>
+		<string>Suns Out, Guns Out</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
@@ -928,7 +928,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Tanning oil</string>
+		<string>Tanning Oil</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
@@ -976,7 +976,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Forbidden apple</string>
+		<string>Forbidden Apple</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
@@ -1012,7 +1012,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Dead babies</string>
+		<string>Dead Babies</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
@@ -1066,7 +1066,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Foul mouth</string>
+		<string>Foul Mouth</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
@@ -1078,13 +1078,13 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Rich people</string>
+		<string>Rich People</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Poor people</string>
+		<string>Poor People</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
@@ -1102,7 +1102,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Facebook official</string>
+		<string>Facebook Official</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
@@ -1126,13 +1126,13 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Moment of silence</string>
+		<string>Moment of Silence</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Smelly grandparents</string>
+		<string>Smelly Grandparents</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
@@ -1210,7 +1210,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Time travel</string>
+		<string>Time Travel</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
@@ -1228,7 +1228,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Drinking alone</string>
+		<string>Drinking Alone</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
@@ -1240,13 +1240,13 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Disco night</string>
+		<string>Disco Night</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Thirsty thursday</string>
+		<string>Thirsty Thursday</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
@@ -1312,7 +1312,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Facebook stalking</string>
+		<string>Facebook Stalking</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
@@ -1330,7 +1330,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Hot shower</string>
+		<string>Hot Shower</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
@@ -1348,7 +1348,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Turkey sandwich</string>
+		<string>Turkey Sandwich</string>
 		<key>catid</key>
 		<integer>3</integer>
 	</dict>
@@ -1432,7 +1432,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>SHOTS SHOTS SHOTS</string>
+		<string>SHOTS</string>
 		<key>catid</key>
 		<integer>4</integer>
 	</dict>
@@ -1462,13 +1462,13 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>wake n bake</string>
+		<string>wake n Bake</string>
 		<key>catid</key>
 		<integer>4</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>hangovers</string>
+		<string>Hangovers</string>
 		<key>catid</key>
 		<integer>4</integer>
 	</dict>
@@ -1654,7 +1654,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>C&apos;s Get Degrees</string>
+		<string>C&apos;s get Degrees</string>
 		<key>catid</key>
 		<integer>4</integer>
 	</dict>
@@ -1715,12 +1715,6 @@
 	<dict>
 		<key>name</key>
 		<string>420</string>
-		<key>catid</key>
-		<integer>4</integer>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>Turn down for what</string>
 		<key>catid</key>
 		<integer>4</integer>
 	</dict>
@@ -1870,12 +1864,6 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>C&apos;s get degrees</string>
-		<key>catid</key>
-		<integer>4</integer>
-	</dict>
-	<dict>
-		<key>name</key>
 		<string>Fart lapse</string>
 		<key>catid</key>
 		<integer>4</integer>
@@ -1996,7 +1984,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Dead week</string>
+		<string>Dead Week</string>
 		<key>catid</key>
 		<integer>4</integer>
 	</dict>
@@ -2032,7 +2020,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Business fraternities</string>
+		<string>Business Fraternities</string>
 		<key>catid</key>
 		<integer>4</integer>
 	</dict>
@@ -2044,7 +2032,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Excessive drinking</string>
+		<string>Excessive Drinking</string>
 		<key>catid</key>
 		<integer>4</integer>
 	</dict>
