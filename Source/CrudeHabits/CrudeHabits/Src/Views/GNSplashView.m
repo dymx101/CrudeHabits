@@ -60,7 +60,8 @@
         
         [_btnPlay constrainWidth:@"200" height:@"45"];
         [_btnPlay alignCenterXWithView:self predicate:@"0"];
-        [_btnPlay constrainTopSpaceToView:_lblC predicate:@"50"];
+        //[_btnPlay constrainTopSpaceToView:_lblC predicate:@"50"];
+        [_btnPlay alignBottomEdgeWithView:self predicate:@"-130"];
         
         
         //////
@@ -74,7 +75,8 @@
         
         [_btnHowItWorks constrainWidth:@"200" height:@"45"];
         [_btnHowItWorks alignCenterXWithView:self predicate:@"0"];
-        [_btnHowItWorks constrainTopSpaceToView:_btnPlay predicate:@"20"];
+        //[_btnHowItWorks constrainTopSpaceToView:_btnPlay predicate:@"20"];
+        [_btnHowItWorks alignBottomEdgeWithView:self predicate:@"-70"];
         
     }
     return self;

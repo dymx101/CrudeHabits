@@ -150,7 +150,9 @@ typedef enum {
     [self.view addSubview:_lblWord];
     [_lblWord alignLeading:@"30" trailing:@"-30" toView:self.view];
 
-    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:_lblWord attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:-400];
+    CGFloat constant = IS_WIDESCREEN ? -400 : -350;
+    
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:_lblWord attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:constant];
     [self.view addConstraint:constraint];
     
     
@@ -282,7 +284,13 @@ typedef enum {
     [self.view addSubview:_viewTeam1Progress];
     [_viewTeam1Progress constrainWidth:@"20" height:@"260"];
     [_viewTeam1Progress alignLeadingEdgeWithView:self.view predicate:@"20"];
-    [_viewTeam1Progress alignBottomEdgeWithView:self.view predicate:@"-80"];
+    
+    if (IS_WIDESCREEN) {
+        [_viewTeam1Progress alignBottomEdgeWithView:self.view predicate:@"-80"];
+    } else {
+        [_viewTeam1Progress alignBottomEdgeWithView:self.view predicate:@"-40"];
+    }
+    
     [_viewTeam1ProgressBG alignTop:@"0" leading:@"-20" bottom:@"40" trailing:@"20" toView:_viewTeam1Progress];
     [_btnNext alignTopEdgeWithView:_viewTeam1ProgressBG predicate:@"140"];
     [_viewCircularTimer alignTopEdgeWithView:_viewTeam1ProgressBG predicate:@"20"];
@@ -297,7 +305,13 @@ typedef enum {
     [self.view addSubview:_viewTeam2Progress];
     [_viewTeam2Progress constrainWidth:@"20" height:@"260"];
     [_viewTeam2Progress alignTrailingEdgeWithView:self.view predicate:@"-20"];
-    [_viewTeam2Progress alignBottomEdgeWithView:self.view predicate:@"-80"];
+    
+    if (IS_WIDESCREEN) {
+        [_viewTeam2Progress alignBottomEdgeWithView:self.view predicate:@"-80"];
+    } else {
+        [_viewTeam2Progress alignBottomEdgeWithView:self.view predicate:@"-40"];
+    }
+    
     [_viewTeam2ProgressBG alignTop:@"0" leading:@"-20" bottom:@"40" trailing:@"20" toView:_viewTeam2Progress];
     
     

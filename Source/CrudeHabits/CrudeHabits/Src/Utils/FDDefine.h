@@ -81,6 +81,7 @@ objc_setAssociatedObject(self, &kProperty##PROPERTY_NAME , PROPERTY_NAME , OBJC_
 } \
 
 
+#define IS_WIDESCREEN ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 
 ///////////////////////////////////////////////////////////////////////////////////
 @interface FDDefine : NSObject @end
