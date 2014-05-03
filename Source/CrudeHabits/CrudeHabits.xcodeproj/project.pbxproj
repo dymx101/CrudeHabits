@@ -426,6 +426,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Gagein;
 				TargetAttributes = {
+					EA3B00D71901F5D400C63D9D = {
+						DevelopmentTeam = S839V95372;
+					};
 					EA3B00F81901F5D400C63D9D = {
 						TestTargetID = EA3B00D71901F5D400C63D9D;
 					};
@@ -683,6 +686,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrudeHabits/CrudeHabits-Prefix.pch";
 				INFOPLIST_FILE = "CrudeHabits/CrudeHabits-Info.plist";
@@ -699,6 +703,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrudeHabits/CrudeHabits-Prefix.pch";
 				INFOPLIST_FILE = "CrudeHabits/CrudeHabits-Info.plist";
