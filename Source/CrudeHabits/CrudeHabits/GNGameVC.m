@@ -141,7 +141,7 @@ typedef enum {
     
     _lblWord = [UILabel new];
     _lblWord.font = [UIFont fontWithName:FONT_REGULAR size:45];
-    _lblWord.minimumScaleFactor = .5f;
+    _lblWord.minimumScaleFactor = .1f;
     _lblWord.adjustsFontSizeToFitWidth = YES;
     _lblWord.textColor = [UIColor whiteColor];
     _lblWord.numberOfLines = 2;
@@ -436,6 +436,8 @@ typedef enum {
         _word = _words[rand];
     }
     
+    NSRange range = [_word.name rangeOfString:@" "];
+    _lblWord.numberOfLines = (range.location == NSNotFound ? 1 : 2);
     _lblWord.text = _word.name;
     DLog(@"word: %@", _word.name);
     
